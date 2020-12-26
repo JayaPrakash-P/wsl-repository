@@ -1,18 +1,15 @@
-
 TARGET := WSLTest
 
 SRCFILES:=$(shell find . -name *.cpp)
 OBJFILES:=$(SRCFILES:.cpp=.o)
 
 all : $(TARGET)
-	@echo  MAKING ALL
+	@echo Inside all
+	@echo TARGET   = $(TARGET)
 	@echo SRCFILES = $(SRCFILES)
 	@echo OBJFILES = $(OBJFILES)
-	@echo TARGET = $(TARGET)
 
 $(TARGET) : $(OBJFILES)
-	@echo SRCFILES = $(SRCFILES)
-	@echo OBJFILES = $(OBJFILES)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJFILES)
 
 #%.o : %.cpp
