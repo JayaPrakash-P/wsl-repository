@@ -1,0 +1,11 @@
+﻿  Cleaning remote project directory
+  Validating sources
+  Copying sources remotely to 'localhost'
+  Validating architecture
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  main.cpp
+  Linking objects
+  LinuxDev.vcxproj -> C:\JP\Work\C++\VisualStudioProjects\Linux\LinuxDev\bin\x64\Debug\LinuxDev.out
+          1 file(s) copied.
