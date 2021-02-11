@@ -1,0 +1,33 @@
+CC = g++
+CFLAGS = -Wall
+PROG = game
+
+SRCS := $(patsubst %.cpp,%.o,$(wildcard *.cpp))
+SRCS += $(patsubst %.cpp,%.o,$(wildcard */*.cpp))
+SRCS += $(patsubst %.cpp,%.o,$(wildcard */*/*.cpp))
+SRCS += $(patsubst %.cpp,%.o,$(wildcard */*/*/*.cpp))
+
+COMPILE = $(CC) $(CFLAGS) -c
+
+ifeq ($(shell uname),Darwin)
+	LIBS = -framework OpenGL -framework GLUT -framework CoreFoundation
+else
+	LIBS = -lglut
+endif
+
+#LIBS += Lib/libSOIL.a
+
+all: $(PROG)
+
+$(PROG):	$(SRCS)
+	$(CC) $(CFLAGS) -lboost_filesystem -lboost_system -o $(PROG) $(SRCS) $(LIBS)
+
+clean:
+	rm -f $(PROG)
+	rm -f *.o
+	rm -f */*.o
+	rm -f */*/*.o
+	rm -f */*/*/*.o
+
+%.o: %.cpp
+	$(COMPILE) -o $@ $<
