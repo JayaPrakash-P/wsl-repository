@@ -1,4 +1,5 @@
 #include <vector>
+#include <list>
 #include <iostream>
 #include <algorithm>
 #include <functional>
@@ -7,6 +8,8 @@
 #include <thread>
 #include <mutex>
 #include <unordered_set>
+
+#include "Helper.h"
 
 using namespace std;
 
@@ -391,14 +394,14 @@ typedef struct UnOrdTest
         Y = other.Y;
         return *this;
     };
-	
+
    size_t operator()(const UnOrdTest& pointToHash) const
    {
         cout << "UnOrdTest::operator()" << endl;
         size_t hash = pointToHash.X + 10 * pointToHash.Y;
         return hash;
     };
-    
+
     bool operator==(const UnOrdTest& other) const
     {
         cout << "UnOrdTest::operator==" << endl;
@@ -406,7 +409,7 @@ typedef struct UnOrdTest
             return true;
         return false;
     };
-    
+
 }UnOrdTest;
 
 struct PointClass
@@ -418,7 +421,7 @@ struct PointClass
   {
     cout << "PointClass CTOR - PointClass()" << endl;
   }//Unused
-  
+
   PointClass(int x, int y)
   {
     cout << "PointClass CTOR - PointClass(int x, int y)" << endl;
@@ -450,7 +453,7 @@ void UnorderedSetTest()
   cout << "UnorderedSetTest" << endl;
   std::unordered_set<PointClass, PointClass::HashFunction> points;
   std::unordered_set<UnOrdTest, UnOrdTest> unOrdTests({{1,1},{2,2},{4,4},{3,3}});
-  
+
   unsigned n = points.bucket_count();
   std::cout << "points has " << n << " buckets.\n";
 
@@ -470,7 +473,7 @@ void UnorderedSetTest()
   {
     std::cout << "(" << point.x << ", " << point.y << ")" << "\n";
   }
-  
+
   std::cout << "UnOrdTests: " << "\n";
   for (auto& unOrdTest : unOrdTests)
   {
@@ -496,19 +499,19 @@ class X
   std::cout << "custom placement delete called, b = " << b << '\n';
   ::operator delete(ptr);
   }
-  
+
 /*  void operator delete[](void* ptr)
   {
     cout << "operator delete[]\n";
     free(ptr);
-  } 
+  }
    void* operator new(size_t size)
   {
     cout << "operator new - size = " << size<< "\n";
     void* ptr = malloc(size);
     return ptr;
   }
-  
+
   void* operator new[](size_t size)
   {
     cout << "operator new[] - size = " << size<< "\n";
@@ -546,6 +549,106 @@ void VariableInitTest()
     delete[] xPtr1;
 }
 
+//##################################################################################################SmartPtrTest
+int SmartPtrTest()
+{
+    std::shared_ptr<int> sp0(new int(5));
+    std::weak_ptr<int> wp0(sp0);
+    std::weak_ptr<int>::element_type val = *wp0.lock();
+
+    std::cout << "*wp0.lock() == " << val << std::endl;
+
+    std::cout << "*sp0 == " << *sp0 << std::endl;
+
+    std::weak_ptr<int> wp;
+
+    {
+        std::shared_ptr<int> sp(new int(10));
+        wp = sp;
+        std::cout << "wp.expired() == " << std::boolalpha
+            << wp.expired() << std::endl;
+        std::cout << "*wp.lock() == " << *wp.lock() << std::endl;
+    }
+
+    std::cout << "wp0.expired() (Before Reset) == " << std::boolalpha
+        << wp0.expired() << std::endl;
+    wp0.reset();
+    std::cout << "wp0.expired() (After Reset) == " << std::boolalpha
+        << wp0.expired() << std::endl;
+
+    // check expired after sp is destroyed
+    std::cout << "wp.expired() == " << std::boolalpha
+        << wp.expired() << std::endl;
+    std::cout << "(bool)wp.lock() == " << std::boolalpha
+        << (bool)wp.lock() << std::endl;
+
+    return (0);
+}
+//##################################################################################################ConversionCTORTest
+class ConversionCTOR
+{
+private:
+    double real;
+    double imag;
+
+public:
+    // Default constructor
+    ConversionCTOR(double r = 0.0, double i = 0.0) : real(r), imag(i)
+    {
+      std::cout << "ConversionCTOR(" << r << "," << i << ") called!!!" << std::endl;
+    }
+
+    // A method to compare two ConversionCTOR numbers
+    bool operator == (ConversionCTOR rhs)
+    {
+      std::cout << "operator == called!!!" << std::endl;
+      return (real == rhs.real && imag == rhs.imag)? true : false;
+    }
+
+    friend ostream& operator<< (ostream& out, const ConversionCTOR &myData)
+    {
+      out << "ConversionCTOR:(" << (myData.real) << "," << (myData.imag) << ")" << std::endl;
+      return out;
+    }
+};
+
+int ConversionCTORTest()
+{
+    // a ConversionCTOR object
+    ConversionCTOR com1(3.0, 5.0);
+    ConversionCTOR com2 = 3.0;
+
+    if (com2 == 3.0)
+       cout << "Same";
+    else
+       cout << "Not Same";
+     return 0;
+}
+//##################################################################################################OverLoadTest
+
+class Over {
+public:
+   Over() { cout << "Over default constructor\n"; }
+   Over( Over &o ) { cout << "Over& constructor\n"; }
+   Over( const Over &co ) { cout << "const Over& constructor\n"; }
+   Over( volatile Over &vo ) { cout << "volatile Over& constructor\n"; }
+
+   void Test(){cout << "Over::Test()\n";};
+   void Test() const {cout << "Over::Test() const\n";};
+   void Test() volatile {cout << "Over::Test() volatile\n";};
+};
+
+void OverLoadTest() {
+   Over o1;            // Calls default constructor.
+   Over o2( o1 );      // Calls Over( Over& ).
+   o2.Test();
+   const Over o3;      // Calls default constructor.
+   Over o4( o3 );      // Calls Over( const Over& ).
+   o3.Test();
+   volatile Over o5;   // Calls default constructor.
+   Over o6( o5 );      // Calls Over( volatile Over& ).
+   o5.Test();
+}
 //##################################################################################################LinkedListTest
 
 template<typename T>
@@ -556,7 +659,7 @@ class LinkedList
   {
     cout << "LinkedList() CTOR\n";
   }
-  
+
   void Insert(T data)
   {
     Node* tempNode = nullptr;
@@ -579,20 +682,20 @@ class LinkedList
       head->nextNode  = nullptr;
     }
   }
- 
+
   void Display()
   {
     if(head != nullptr)
     {
       Node* tempNode = head;
       cout << "LinkedList :";
-      
+
       do
       {
         cout << "[" << tempNode->nodeData << "]";
         tempNode = tempNode->nextNode;
       }while(tempNode != nullptr);
-      
+
       cout << endl;
     }
     else
@@ -613,13 +716,13 @@ private:
 void LinkedListTest()
 {
     LinkedList<int>* lList = new LinkedList<int>();
-    
+
     lList->Insert(10);
     lList->Insert(20);
     lList->Insert(30);
     lList->Insert(40);
     lList->Insert(50);
-    
+
     lList->Display();
 
     delete lList;
@@ -656,10 +759,116 @@ void ArrayAccessTest()
     cout << "r4 = " << r4 << endl;
     cout << "r5 = " << r5 << endl;
 }
+//##################################################################################################For_Each_Impl_Test
+template<class InputIterator, class Function>
+void FOR_EACH(InputIterator first, InputIterator last, Function fn)
+{
+  while (first!=last) {
+    fn (*first);
+    ++first;
+  }
+  //return fn;      // or, since C++11: return move(fn);
+}
+
+class MyAdd
+{
+public:
+  void operator() (int x)
+  {
+    std::cout << "x = " << x <<std::endl;
+  }
+
+};
+
+typedef std::function<void(int)> Function;
+Function dispFn = MyAdd();
+
+void For_Each_Impl_Test()
+{
+  std::vector<int> myVec{1,2,3,4,9,8,7,6};
+  FOR_EACH(begin(myVec), end(myVec), dispFn);
+  FOR_EACH(begin(myVec), end(myVec), std::bind(MyAdd(), std::placeholders::_1));
+}
+
+//##################################################################################################IteratotTraitsTest
+template<class BidirIt>
+void my_reverse(BidirIt first, BidirIt last)
+{
+    typename std::iterator_traits<BidirIt>::difference_type n = std::distance(first, last);
+    --n;
+    while(n > 0) {
+        typename std::iterator_traits<BidirIt>::value_type tmp = *first;
+        *first++ = *--last;
+        *last = tmp;
+        n -= 2;
+    }
+}
+
+void IteratotTraitsTest()
+{
+    std::vector<int> v{1, 2, 3, 4, 5};
+    my_reverse(v.begin(), v.end());
+    for (int n : v) {
+        std::cout << n << ' ';
+    }
+    std::cout << '\n';
+
+    std::list<int> l{1, 2, 3, 4, 5};
+    my_reverse(l.begin(), l.end());
+    for (auto n : l) {
+        std::cout << n << ' ';
+    }
+    std::cout << '\n';
+
+    int a[] = {1, 2, 3, 4, 5};
+    my_reverse(a, a+5);
+    for (int i=0; i<5; ++i) {
+        std::cout << a[i] << ' ';
+    }
+    std::cout << '\n';
+
+//    std::istreambuf_iterator<char> i1(std::cin), i2;
+//    my_reverse(i1, i2); // compilation error
+
+}
+
+//##################################################################################################STD_Accumulate_Test
+int AccumulateFn (int x, int y)
+{
+    std::cout << "\nmyfunction : x = " << x << ", y = " << y << std::endl;
+    return x+2*y;
+}
+struct AccumulateFunctor {
+	int operator()(int x, int y) {return x+3*y;}
+} myobject;
+
+int STD_Accumulate_Test () {
+  int init = 100;
+  int numbers[] = {10,20,30};
+
+  std::cout << "using default accumulate: ";
+  std::cout << std::accumulate(numbers,numbers+3,init);
+  std::cout << '\n';
+
+  std::cout << "using functional's minus: ";
+  std::cout << std::accumulate (numbers, numbers+3, init, std::minus<int>());
+  std::cout << '\n';
+
+  std::cout << "using AccumulateFn: ";
+  std::cout << std::accumulate (numbers, numbers+3, init, AccumulateFn);
+  std::cout << '\n';
+
+  std::cout << "using AccumulateFunctor: ";
+  std::cout << std::accumulate (numbers, numbers+3, init, AccumulateFunctor());
+  std::cout << '\n';
+
+  return 0;
+}
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-------------MAIN
 int main()
 {
+
   //ConstMemberinClassTest();
   //ForEachTest();
   //StringTest();
@@ -667,8 +876,14 @@ int main()
   //LambdaTest();
   //UnorderedSetTest();
   //VariableInitTest();
-  LinkedListTest();
+  //LinkedListTest();
   //LockTest();
-
-
+  //OverLoadTest();
+  //SmartPtrTest();
+  //ConversionCTORTest();
+  //For_Each_Impl_Test();
+  //STD_Accumulate_Test();
+  //IteratotTraitsTest();
+  //ConstructorTests();
+  ThreadTests();
 }

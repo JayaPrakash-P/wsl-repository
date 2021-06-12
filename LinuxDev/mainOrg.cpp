@@ -86,11 +86,7 @@ void setDataReady(){
     condVar.notify_one();                        // (3)
 }
 
-void CallMyMethod(std::pair<string, int> pair) // could be a class static method as well
-{
-	if(pair.second < 5)
-		cout << pair.first << endl;
-}
+
 
 void fx ()
 {
@@ -109,37 +105,6 @@ void fz ()
 
 typedef void(*FPtr)();
 
-typedef struct UnOrdTest
-{
-int X;
-int Y;
-
-    UnOrdTest(const UnOrdTest& other){
-        X = other.X;
-        Y = other.Y;
-    };
-
-    UnOrdTest(const UnOrdTest& other){
-        X = other.X;
-        Y = other.Y;
-    };
-
-    UnOrdTest& operator=(const UnOrdTest& other) {
-        X = other.X;
-        Y = other.Y;
-        return *this;
-    };
-	
-   size_t operator()(const UnOrdTest& pointToHash) const {
-        size_t hash = pointToHash.X + 10 * pointToHash.Y;
-        return hash;
-    };
-    bool operator==(const UnOrdTest& other) {
-        if ( (X == other.X) && (Y == other.Y) )
-            return true;
-        return false;
-    };
-}UnOrdTest;
 
 int main()
 {
@@ -150,7 +115,7 @@ int main()
   std::cout << "assert(-1)\n";
   assert(-1);
 
-  std::unordered_set<UnOrdTest, UnOrdTest> first({{1,1},{2,2},{4,4},{3,3}});
+  
   
   std::cout << std::endl;
 
@@ -189,17 +154,7 @@ int main()
 	  //cout <<"******5*******" << endl;
   }
   
-  std::map<string, int> myMap;
-  myMap.insert({"X4", 4});
-  myMap.insert({"X6", 6});
-  myMap.insert({"X2", 2});
-  myMap.insert({"X7", 7});
-  std::map<string, int>::iterator myMapItr;
-  for(myMapItr=myMap.begin();myMapItr!=myMap.end(); ++myMapItr)
-	  if(myMapItr->second < 5)
-		  cout << myMapItr->first << endl;
-  
-  std::for_each(myMap.begin(), myMap.end(), CallMyMethod);
+
   
   ping = pong = false;
   std::cout << std::endl;
