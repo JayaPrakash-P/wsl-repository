@@ -1,29 +1,31 @@
-CC=gcc
-CXX=g++
-RM=rm -f
-CPPFLAGS=-g
-LDFLAGS=-g
+TARGET		= DesignPatternTest
+
+CC			= gcc
+CXX			= g++
+RM			= rm -f
+CPPFLAGS	= -g -I./Singleton
 
 #CPPFLAGS=-g $(shell root-config --cflags)
 #LDFLAGS=-g $(shell root-config --ldflags)
 #LDLIBS=$(shell root-config --libs)
 
 SRCS=DesignPatternTest.cc
+
 OBJS=$(subst .cc,.o,$(SRCS))
 
-all: DesignPatternTest
+all: $(TARGET)
 
-DesignPatternTest: $(OBJS)
-	$(CXX) $(LDFLAGS) -o DesignPatternTest $(OBJS) $(LDLIBS)
+$(TARGET): $(OBJS)
+	$(CXX) $(CPPFLAGS) -o $@ $(OBJS) $(LDLIBS)
 
 depend: .depend
 
 .depend: $(SRCS)
-	$(RM) ./.depend
-	$(CXX) $(CPPFLAGS) -MM $^>>./.depend;
+	$(RM) $@
+	$(CXX) $(CPPFLAGS) -MM $^ >> $@;
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) DesignPatternTest
 
 distclean: clean
 	$(RM) *~ .depend
