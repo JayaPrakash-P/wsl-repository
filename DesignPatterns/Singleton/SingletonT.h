@@ -3,6 +3,26 @@
 
 #include <iostream>
 
+class CSingleton final
+{
+public:
+    static CSingleton& GetInstance();
+ 
+private:
+    CSingleton() = default;
+    ~CSingleton() = default;
+ 
+    CSingleton(const CSingleton&) = delete;
+    CSingleton& operator=(const CSingleton&) = delete;
+    CSingleton(CSingleton&&) = delete;
+    CSingleton& operator=(CSingleton&&) = delete;
+};
+ 
+CSingleton& CSingleton::GetInstance()
+{
+    static CSingleton instance;
+    return instance;
+}
 template <class T>
 class Singleton
 {
