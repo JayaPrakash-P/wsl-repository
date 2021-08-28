@@ -1,0 +1,31 @@
+make all -f "/home/jp/WIP/GITRepos/wsl-repository/Makefile" --dry-run --keep-going --print-directory
+make: Entering directory '/home/jp/WIP/GITRepos/wsl-repository'
+cxxtestgen --have-eh --abort-on-fail --root --error-printer -o CxxTests/CxxTestRunner.cpp
+g++ -c -o CxxTests/CxxTestRunner.o CxxTests/CxxTestRunner.cpp
+ 
+$TESTS is [./CxxTests/CxxTest3Suite.h ./CxxTests/CxxTest1Suite.h ./CxxTests/CxxTest2Suite.h]
+$OBJS is [./CxxTests/CxxTestRunner.o ./CxxTests/CxxTest3Suite.o ./CxxTests/CxxTest1Suite.o ./CxxTests/CxxTest2Suite.o]
+cxxtestgen --have-eh --abort-on-fail --part -o CxxTests/CxxTest3Suite.cpp CxxTests/CxxTest3Suite.h
+g++ -c -o CxxTests/CxxTest3Suite.o CxxTests/CxxTest3Suite.cpp
+$TESTS is [./CxxTests/CxxTest3Suite.h ./CxxTests/CxxTest1Suite.h ./CxxTests/CxxTest2Suite.h]
+$OBJS is [./CxxTests/CxxTestRunner.o ./CxxTests/CxxTest3Suite.o ./CxxTests/CxxTest1Suite.o ./CxxTests/CxxTest2Suite.o]
+cxxtestgen --have-eh --abort-on-fail --part -o CxxTests/CxxTest1Suite.cpp CxxTests/CxxTest1Suite.h
+g++ -c -o CxxTests/CxxTest1Suite.o CxxTests/CxxTest1Suite.cpp
+$TESTS is [./CxxTests/CxxTest3Suite.h ./CxxTests/CxxTest1Suite.h ./CxxTests/CxxTest2Suite.h]
+$OBJS is [./CxxTests/CxxTestRunner.o ./CxxTests/CxxTest3Suite.o ./CxxTests/CxxTest1Suite.o ./CxxTests/CxxTest2Suite.o]
+cxxtestgen --have-eh --abort-on-fail --part -o CxxTests/CxxTest2Suite.cpp CxxTests/CxxTest2Suite.h
+g++ -c -o CxxTests/CxxTest2Suite.o CxxTests/CxxTest2Suite.cpp
+g++ -o CxxTests/CxxTestRunner CxxTests/CxxTestRunner.o CxxTests/CxxTest3Suite.o CxxTests/CxxTest1Suite.o CxxTests/CxxTest2Suite.o
+$TESTS is [./CxxTests/CxxTest3Suite.h ./CxxTests/CxxTest1Suite.h ./CxxTests/CxxTest2Suite.h]
+$OBJS is [./CxxTests/CxxTestRunner.o ./CxxTests/CxxTest3Suite.o ./CxxTests/CxxTest1Suite.o ./CxxTests/CxxTest2Suite.o]
+rm -f ./CxxTests/*~ ./CxxTests/*.cpp ./CxxTests/*.o
+ 
+test1 running...
+test2 running...
+test3 running...
+test4 running...
+test running with [test1 test2 test3 test4]
+test running with [test1]
+rm CxxTests/CxxTest3Suite.cpp CxxTests/CxxTest1Suite.cpp CxxTests/CxxTest2Suite.cpp
+make: Leaving directory '/home/jp/WIP/GITRepos/wsl-repository'
+ 
