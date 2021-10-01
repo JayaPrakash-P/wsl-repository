@@ -1,4 +1,5 @@
 #include<thread>
+#include<mutex>
 #include<iostream>
 #include<chrono>
 #include<cstdlib>
@@ -7,6 +8,8 @@
 
 using std::cout;
 using std::endl;
+
+std::mutex iomutex;
 
 struct Static {
     ~Static()
@@ -35,7 +38,7 @@ void ThreadFunction1(int n)
     int policy;
     pthread_getschedparam(pthread_self(), &policy, &sch);
     std::lock_guard<std::mutex> lk(iomutex);
-    std::cout << "Thread " << num << " is executing at priority "
+    std::cout << "Thread " << n << " is executing at priority "
               << sch.sched_priority << '\n';
 
 }
@@ -85,7 +88,7 @@ void ThreadTests()
     std::thread threadObj; //Doesn't represent a thread
     std::thread thread1(ThreadFunction1, n1);
     std::thread thread2(ThreadFunction2, std::ref(n2));
-    std::thread thread3(ThreadTest::ThreadFunction, t1, n3);
+    std::thread thread3(&ThreadTest::ThreadFunction, t1, n3);
     std::thread thread4(t2, std::ref(n4));
     std::thread thread5(t2);
 

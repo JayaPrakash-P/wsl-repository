@@ -885,5 +885,6 @@ int main()
   //STD_Accumulate_Test();
   //IteratotTraitsTest();
   //ConstructorTests();
+  VariadicTemplateTests();
   ThreadTests();
 }
