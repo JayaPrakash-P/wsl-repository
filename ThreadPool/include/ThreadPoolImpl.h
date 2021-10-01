@@ -4,8 +4,15 @@
 #include<iostream>
 #include<memory>
 #include<vector>
+#include<queue>
+#include<functional>
+#include<thread>
+#include<mutex>
+#include<condition_variable>
 
-#include "ThreadImpl.h"
+//#include "ThreadImpl.h"
+
+typedef void (*Job)(void);
 
 class ThreadPool
 {
@@ -16,11 +23,25 @@ class ThreadPool
         unsigned int GetNoOfThreads() { return noOfThreads; }
         void SetNoOfThreads(unsigned int val) { noOfThreads = val; }
 
+        void Init();
+        void AssignWork(Job action);
+
+
     private:
         unsigned int noOfThreads;
 
-        using ThreadPtr = std::unique_ptr<Thread>;
-        std::vector<ThreadPtr> threadList;
+        //using ThreadPtr = std::unique_ptr<Thread>;
+        using ThreadPtr = std::unique_ptr<std::thread>;
+        std::vector<ThreadPtr> threadPtrList;
+        std::queue<Job> jobQueue;
+        bool keepRunning = false;
+
+        std::mutex mtxJobQueue;
+        std::condition_variable condActivateJob;
+
+
+
+        void Start(int i);
 
         ThreadPool(const ThreadPool& other) = delete;
         ThreadPool& operator=(const ThreadPool& other) = delete;

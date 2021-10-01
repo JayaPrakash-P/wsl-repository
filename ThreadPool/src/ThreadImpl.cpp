@@ -2,10 +2,9 @@
 
 Thread::Thread(unsigned int threadId)
     : threadID(threadId),
-      keepGoing(true),
-      activated(false)
+      keepRunning(true)
 {
-    myThread = std::thread(&Thread::Spawn, this);
+    myThread = std::thread(&Thread::Start, this);
 }
 
 Thread::~Thread()
@@ -13,8 +12,7 @@ Thread::~Thread()
     std::cout << "Thread DTOR called for Thread#" << threadID << std::endl;
     {
         std::lock_guard<std::mutex> lck(mtxActivate);
-        keepGoing = false;
-        activated = true;
+        keepRunning = false;
         condActivate.notify_one();
     }
     std::cout << "Waiting to join Thread#" << threadID << std::endl;
@@ -22,26 +20,24 @@ Thread::~Thread()
     std::cout << "Thread#" << threadID << " joined...\n";
 }
 
-void Thread::Activate()
+void Thread::AddJob()
 {
     std::lock_guard<std::mutex> lck(mtxActivate);
-    std::cout << "Activating Thread#" << threadID << std::endl;
-    activated = true;
     condActivate.notify_one();
 }
 
-void Thread::Spawn()
+void Thread::Start()
 {
     //std::cout << "Spawned Thread#" << threadID << std::endl;
 
-    while(keepGoing)
+    while(keepRunning)
     {
         {
             std::unique_lock<std::mutex> lck(mtxActivate);
             std::cout << "Thread#" << threadID << " - Before condActivate.wait\n";
-            condActivate.wait(lck, [this]{return activated;});
+            condActivate.wait(lck, [this]{return keepRunning;});
             std::cout << "Thread#" << threadID << " - After condActivate.wait\n";
-            if(keepGoing)
+            if(keepRunning)
             {
                 std::cout << "Thread#" << threadID << " Activated...\n";
                 std::this_thread::sleep_for(std::chrono::seconds(5));
@@ -52,8 +48,6 @@ void Thread::Spawn()
             {
                 std::cout << "Thread#" << threadID << " Exiting...\n";
             }
-            activated = false;
-
         }
     }
     std::cout << "Thread#" << threadID << " Exited!!!\n";

@@ -4,7 +4,7 @@ TARGET   := ThreadPool
 
 INCLUDEDIR = ./include
 SOURCEDIR  = ./src
-OBJDIR     = ./obj/Debug/src
+OBJDIR     = ./obj
 
 SOURCES := $(notdir $(shell find $(SOURCEDIR) -name '*.cpp'))
 OBJECTS := $(addprefix $(OBJDIR)/,$(SOURCES:%.cpp=%.o))

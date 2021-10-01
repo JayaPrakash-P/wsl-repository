@@ -13,18 +13,17 @@ class Thread
         Thread(unsigned int threadId);
         virtual ~Thread();
 
-        void Activate();
+        void AddJob();
 
     private:
         Thread(const Thread& other)             = delete;
         Thread& operator=(const Thread& other)  = delete;
 
-        void Spawn();
+         void Start();
 
         std::thread myThread;
         unsigned int threadID;
-        bool keepGoing;
-        bool activated;
+        bool keepRunning;
 
         std::mutex mtxActivate;
         std::condition_variable condActivate;

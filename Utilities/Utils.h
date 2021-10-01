@@ -1,3 +1,5 @@
+#ifndef _UTILS_H_
+#define _UTILS_H_
 #include <iostream>
 #include <chrono>
 
@@ -78,3 +80,5 @@ private:
     LogType logType;
     Time entryTime, exitTime;
 };
+
+#endif //_UTILS_H_

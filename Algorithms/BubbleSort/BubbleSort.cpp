@@ -1,14 +1,11 @@
-#include <iostream>
-#include <cstdlib>     /* srand, rand */
-#include <ctime>       /* time */
-
 #include "BubbleSort.h"
-#include "../../Utilities/Utils.h"
 
-template<class T>
-void BubbleSortAsc(T toSort[], int noOfItems) 
+template <typename T>
+void BubbleSort<T>::SortAscending(T toSort[]) 
 {
 	LogEntryExit log(__func__,LogType::All);
+
+    int noOfItems = sizeof(toSort)/sizeof(toSort[0]);
 
     bool swapped = false;
 	for (auto i = 0; i < noOfItems - 1; i++)
@@ -16,23 +13,24 @@ void BubbleSortAsc(T toSort[], int noOfItems)
 		for (auto j = 0; j < noOfItems - i - 1; j++)
 			if (toSort[j] > toSort[j+1])
 			{
-				swap(toSort[j], toSort[j+1]);
+				std::swap(toSort[j], toSort[j+1]);
 				swapped = true;
 			}
 
 		if(!swapped)
 		{
-			cout << "Already sorted!!!\n";
+			std::cout << "Already sorted!!!\n";
 			break;
 		}
-			
 	}
 }
 
-template<class T>
-void BubbleSortDesc(T toSort[], int noOfItems) 
+template<typename T>
+void BubbleSort<T>::SortDescending(T toSort[]) 
 {
 	LogEntryExit log(__func__,LogType::All);
+
+    int noOfItems = sizeof(toSort)/sizeof(toSort[0]);
 
     bool swapped = false;
 	for (auto i = 0; i < noOfItems - 1; i++)
@@ -40,16 +38,17 @@ void BubbleSortDesc(T toSort[], int noOfItems)
 		for (auto j = 0; j < noOfItems - i - 1; j++)
 			if (toSort[j] < toSort[j+1])
 			{
-				swap(toSort[j], toSort[j+1]);
+				std::swap(toSort[j], toSort[j+1]);
 				swapped = true;
 			}
 
 		if(!swapped)
 		{
-			cout << "Already sorted!!!\n";
+			std::cout << "Already sorted!!!\n";
 			break;
 		}
-			
 	}
 }
 
+template class BubbleSort<int>;
+template class BubbleSort<char>;

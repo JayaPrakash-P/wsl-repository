@@ -1,0 +1,18 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/jp/WIP/GITRepos/wsl-repository/ThreadPool",
+            "binaryPath": "/home/jp/WIP/GITRepos/wsl-repository/ThreadPool/ThreadPool",
+            "binaryArgs": [],
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin"
+        }
+    ],
+    "files.associations": {
+        "condition_variable": "cpp",
+        "vector": "cpp",
+        "functional": "cpp",
+        "thread": "cpp",
+        "chrono": "cpp"
+    }
+}

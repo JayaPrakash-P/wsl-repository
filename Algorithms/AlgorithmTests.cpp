@@ -2,7 +2,7 @@
 
 #include "./BubbleSort/BubbleSort.h"
 
-extern const unsigned int inputSize;
+const unsigned int inputSize = 100;
 
 int main()
 {
@@ -19,7 +19,8 @@ int main()
 	for (int i = 0; i < noOfItems; i++)
 		std::cout << toSort[i] << " ";
 
-	BubbleSortAsc<int>(toSort, noOfItems);
+	BubbleSort<int> bubbleSort;
+	bubbleSort.SortAscending(toSort);
 
 	std::cout << "After : ";
 	for (int i = 0; i < noOfItems; i++)
@@ -37,7 +38,8 @@ int main()
 		std::cout << toSort[i] << " ";
 	std::cout << std::endl;
 
-	BubbleSortDesc<int>(toSort, noOfItems);
+	BubbleSort<int> bubbleSort;
+	bubbleSort.SortDescending(toSort);
 
 	std::cout << "Sorted(DESC) : ";
 	for (int i = 0; i < noOfItems; i++)
