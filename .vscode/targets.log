@@ -5,9 +5,8 @@ make all -f "/home/jp/WIP/GITRepos/wsl-repository/Makefile" --print-data-base --
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Sat Oct  2 00:23:23 2021
+# Make data base, printed on Sat Oct  2 00:24:47 2021
 
 # Variables
 
@@ -207,7 +206,6 @@ all: CxxTests
 #  Successfully updated.
 
 .PHONY: all clean
- 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -240,7 +238,7 @@ CxxTests/CxxTest3Suite.cpp: CxxTests/CxxTest3Suite.h
 # Not a target:
 /home/jp/WIP/GITRepos/wsl-repository/Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-10-02 00:23:17.6880557
+#  Last modified 2021-10-02 00:24:39.7180557
 #  File has been updated.
 #  Successfully updated.
 
@@ -279,6 +277,7 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
+ 
 #  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 6):
 	rm -f $(CXXTESTDIR)/*~ $(CXXTESTDIR)/*.cpp $(CXXTESTDIR)/*.o $(CXXTESTDIR)/CxxTestRunner
 
@@ -332,7 +331,6 @@ CxxTests/CxxTestRunner: CxxTests/CxxTestRunner.o CxxTests/CxxTest3Suite.o CxxTes
 #  Successfully updated.
 #  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 20):
 	$(CXX) -o $@ $^
- 
 
 # files hash-table stats:
 # Load=19/1024=2%, Rehash=0, Collisions=0/68=0%
@@ -348,6 +346,6 @@ CxxTests/CxxTestRunner: CxxTests/CxxTestRunner.o CxxTests/CxxTest3Suite.o CxxTes
 # strcache performance: lookups = 71 / hit rate = 38%
 # hash-table stats:
 # Load=44/8192=1%, Rehash=0, Collisions=1/71=1%
-# Finished Make data base on Sat Oct  2 00:23:23 2021
+# Finished Make data base on Sat Oct  2 00:24:47 2021
 
  
