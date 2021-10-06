@@ -1,4 +1,4 @@
-#include "ThreadImpl.h"
+#include "../include/ThreadImpl.h"
 
 Thread::Thread(unsigned int threadId)
     : threadID(threadId),

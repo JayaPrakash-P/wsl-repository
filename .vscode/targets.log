@@ -6,7 +6,7 @@ make all -f "/home/jp/WIP/GITRepos/wsl-repository/Makefile" --print-data-base --
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Oct  2 00:24:47 2021
+# Make data base, printed on Wed Oct  6 23:45:07 2021
 
 # Variables
 
@@ -61,7 +61,7 @@ CXXTESTDIR = ./CxxTests
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-4d8471ed-2b87-4733-bc02-54d519425dd7.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-edf649ed-4a73-4f01-aa48-840f0b399d71.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -75,7 +75,7 @@ PWD = /home/jp/WIP/GITRepos/wsl-repository
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/12_interop
+WSL_INTEROP = /run/WSL/18_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/server/remoteExtensionHostProcess
 # environment
@@ -161,7 +161,7 @@ WSL_DISTRO_NAME = Ubuntu
 # environment
 MOTD_SHOWN = update-motd
 # variable set hash-table stats:
-# Load=75/1024=7%, Rehash=0, Collisions=7/111=6%
+# Load=75/1024=7%, Rehash=0, Collisions=8/116=7%
 
 # Pattern-specific Variable Values
 
@@ -169,10 +169,10 @@ MOTD_SHOWN = update-motd
 
 # Directories
 
-# CxxTests (device 2064, inode 1565): 12 files, no impossibilities.
-# ./CxxTests (device 2064, inode 1565): 12 files, no impossibilities.
+# CxxTests (device 2064, inode 1565): 7 files, no impossibilities.
+# ./CxxTests (device 2064, inode 1565): 7 files, no impossibilities.
 
-# 24 files, no impossibilities in 2 directories.
+# 14 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -188,14 +188,11 @@ CxxTests/%.cpp: CxxTests/%.h
 
 # Files
 
-CxxTests/CxxTest1Suite.o: CxxTests/CxxTest1Suite.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'CxxTests/CxxTest1Suite'
-#  Last modified 2021-10-02 00:20:41.8980557
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 23):
-	$(CXX) -c -o $@ $^
+# Not a target:
+CxxTests/CxxTest1Suite.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 all: CxxTests
 #  Phony target (prerequisite of .PHONY).
@@ -203,7 +200,9 @@ all: CxxTests
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 
 .PHONY: all clean
 #  Implicit rule search has not been done.
@@ -211,29 +210,16 @@ all: CxxTests
 #  File has not been updated.
 
 # Not a target:
-CxxTests/CxxTest3Suite.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-08-28 18:40:45.5286492
-#  File has been updated.
-#  Successfully updated.
-
-CxxTests/CxxTest2Suite.o: CxxTests/CxxTest2Suite.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'CxxTests/CxxTest2Suite'
-#  Last modified 2021-10-02 00:20:44.9080557
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 23):
-	$(CXX) -c -o $@ $^
-
-CxxTests/CxxTest3Suite.cpp: CxxTests/CxxTest3Suite.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'CxxTest3Suite'
-#  File is an intermediate prerequisite.
-#  File does not exist.
+CxxTests/CxxTest2Suite.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 26):
-	$(CXXTESTGEN) $(CXXTESTFLAGS) --part -o $@ $^
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 /home/jp/WIP/GITRepos/wsl-repository/Makefile:
@@ -244,27 +230,30 @@ CxxTests/CxxTest3Suite.cpp: CxxTests/CxxTest3Suite.h
 
 CxxTests/CxxTestRunner.cpp:
 #  Implicit rule search has not been done.
-#  Last modified 2021-10-02 00:20:32.2580557
+#  Implicit/static pattern stem: ''
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := CxxTests/CxxTestRunner.cpp
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
 #  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 29):
 	$(CXXTESTGEN) $(CXXTESTFLAGS) --root --error-printer -o $@
-
-# Not a target:
-CxxTests/CxxTest1Suite.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-08-28 18:01:42.1786492
-#  File has been updated.
-#  Successfully updated.
-
-CxxTests/CxxTest1Suite.cpp: CxxTests/CxxTest1Suite.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'CxxTest1Suite'
-#  File is an intermediate prerequisite.
-#  File does not exist.
-#  File has not been updated.
-#  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 26):
-	$(CXXTESTGEN) $(CXXTESTFLAGS) --part -o $@ $^
 
 # Not a target:
 .DEFAULT:
@@ -277,40 +266,23 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
- 
 #  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 6):
 	rm -f $(CXXTESTDIR)/*~ $(CXXTESTDIR)/*.cpp $(CXXTESTDIR)/*.o $(CXXTESTDIR)/CxxTestRunner
 
-CxxTests/CxxTest3Suite.o: CxxTests/CxxTest3Suite.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'CxxTests/CxxTest3Suite'
-#  Last modified 2021-10-02 00:20:38.9580557
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 23):
-	$(CXX) -c -o $@ $^
-
 # Not a target:
-CxxTests/CxxTest2Suite.h:
-#  Implicit rule search has been done.
-#  Last modified 2021-08-28 20:11:49.9986492
-#  File has been updated.
-#  Successfully updated.
-
-CxxTests/CxxTest2Suite.cpp: CxxTests/CxxTest2Suite.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'CxxTest2Suite'
-#  File is an intermediate prerequisite.
-#  File does not exist.
+CxxTests/CxxTest3Suite.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 26):
-	$(CXXTESTGEN) $(CXXTESTFLAGS) --part -o $@ $^
 
 CxxTests: CxxTests/CxxTestRunner
 #  Implicit rule search has not been done.
-#  Last modified 2021-10-02 00:20:45.3480557
+ 
+#  Last modified 2021-10-02 00:26:28.3580557
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 #  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 16):
 	$(info $$OBJS is [${OBJS}])
 	rm -f $(CXXTESTDIR)/*~ $(CXXTESTDIR)/*.cpp $(CXXTESTDIR)/*.o
@@ -318,9 +290,11 @@ CxxTests: CxxTests/CxxTestRunner
 CxxTests/CxxTestRunner.o: CxxTests/CxxTestRunner.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'CxxTests/CxxTestRunner'
-#  Last modified 2021-10-02 00:20:36.3880557
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 #  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 23):
 	$(CXX) -c -o $@ $^
 
@@ -328,24 +302,26 @@ CxxTests/CxxTestRunner: CxxTests/CxxTestRunner.o CxxTests/CxxTest3Suite.o CxxTes
 #  Implicit rule search has not been done.
 #  Last modified 2021-10-02 00:20:45.3380557
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 #  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 20):
 	$(CXX) -o $@ $^
 
 # files hash-table stats:
-# Load=19/1024=2%, Rehash=0, Collisions=0/68=0%
+# Load=13/1024=1%, Rehash=0, Collisions=0/39=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 44 / storage = 750 B / avg = 17 B
-# current buf: size = 8162 B / used = 750 B / count = 44 / avg = 17 B
+# strcache buffers: 1 (0) / strings = 27 / storage = 401 B / avg = 14 B
+# current buf: size = 8162 B / used = 401 B / count = 27 / avg = 14 B
 
-# strcache performance: lookups = 71 / hit rate = 38%
+# strcache performance: lookups = 46 / hit rate = 41%
 # hash-table stats:
-# Load=44/8192=1%, Rehash=0, Collisions=1/71=1%
-# Finished Make data base on Sat Oct  2 00:24:47 2021
+# Load=27/8192=0%, Rehash=0, Collisions=1/46=2%
+# Finished Make data base on Wed Oct  6 23:45:07 2021
 
  

@@ -8,6 +8,7 @@
 #include <thread>
 #include <mutex>
 #include <unordered_set>
+#include <bitset>
 
 #include "Helper.h"
 
@@ -865,6 +866,24 @@ int STD_Accumulate_Test () {
   return 0;
 }
 
+void PrintBinary(int x)
+{
+  
+
+}
+void MacroTests(void)
+{
+  int a = 3, b = 8;
+  std::cout << "a in Binary : " << std::bitset<8>(a) << std::endl;
+  std::cout << "b in Binary : " << std::bitset<8>(b) << std::endl;
+  int c = a^b;
+  int d = c^a;
+  int e = d^b;
+  std::cout << "a^b = " << std::bitset<8>(c)  << std::endl;
+  std::cout << "a^b^a = " << std::bitset<8>(d)  << std::endl;
+  std::cout << "a^b^a^b = " << std::bitset<8>(e)  << std::endl;
+}
+
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-------------MAIN
 int main()
 {
@@ -885,6 +904,7 @@ int main()
   //STD_Accumulate_Test();
   //IteratotTraitsTest();
   //ConstructorTests();
-  VariadicTemplateTests();
-  ThreadTests();
+  //VariadicTemplateTests();
+  //ThreadTests();
+  MacroTests();
 }
