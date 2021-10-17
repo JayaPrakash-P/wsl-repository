@@ -11,5 +11,8 @@
             "binaryPath": "/home/jp/WIP/GITRepos/wsl-repository/Algorithms/a.out",
             "binaryArgs": []
         }
-    ]
+    ],
+    "files.associations": {
+        "iostream": "cpp"
+    }
 }

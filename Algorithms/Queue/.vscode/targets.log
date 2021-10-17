@@ -1,14 +1,13 @@
-make all -f "/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Makefile" --print-data-base --no-builtin-variables --no-builtin-rules --question
-Making target Queue/Queue
+make all -f "/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Queue/Makefile" --print-data-base --no-builtin-variables --no-builtin-rules --question
+Making all with QueueTest
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Sat Oct 16 20:20:36 2021
+# Make data base, printed on Sun Oct 17 20:03:05 2021
 
 # Variables
 
@@ -24,6 +23,8 @@ WSLENV = VSCODE_WSL_EXT_LOCATION/up
 VSCODE_AGENT_FOLDER = /home/jp/.vscode-server
 # environment
 VSCODE_LOG_NATIVE = false
+# makefile (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Queue/Makefile', line 6)
+TARGET := QueueTest
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -31,25 +32,23 @@ VSCODE_LOG_NATIVE = false
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /home/jp/WIP/GITRepos/wsl-repository/Algorithms
+CURDIR := /home/jp/WIP/GITRepos/wsl-repository/Algorithms/Queue
 # makefile
 SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
 _ = /home/jp/.vscode-server/bin/7f6ab5485bbc008386c4386d08766667e155244e/node
-# makefile (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Makefile', line 1)
-MAKEFILE_LIST :=  /home/jp/WIP/GITRepos/wsl-repository/Algorithms/Makefile
-# makefile (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Makefile', line 2)
-SRCFILES := ./PriorityQueueHeapImpl.cpp ./AlgorithmTests.cpp ./Queue/Queue.cpp ./Queue/main.cpp ./BubbleSort/BubbleSort.cpp ./Stack/main.cpp ./Stack/Stack.cpp
+# makefile (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Queue/Makefile', line 1)
+MAKEFILE_LIST :=  /home/jp/WIP/GITRepos/wsl-repository/Algorithms/Queue/Makefile
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
 XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
-# makefile (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Makefile', line 3)
-SRCDIRS := Queue BubbleSort Stack
 # environment
 VSCODE_VERBOSE_LOGGING = true
+# makefile (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Queue/Makefile', line 2)
+OBJS := Queue.o main.o
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -61,23 +60,21 @@ PATH = /home/jp/.vscode-server/bin/7f6ab5485bbc008386c4386d08766667e155244e/bin:
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-7f18fc91-1449-49ad-b5bc-3f03e34950d2.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-bf602b7d-dd9b-45f6-a1da-60096c3c98d2.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
 LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
 # automatic
 %F = $(notdir $%)
-# makefile (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Makefile', line 4)
-OBJFILES := ./PriorityQueueHeapImpl.cpp ./AlgorithmTests.cpp ./Queue/Queue.cpp ./Queue/main.cpp ./BubbleSort/BubbleSort.cpp ./Stack/main.cpp ./Stack/Stack.cpp
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /home/jp/WIP/GITRepos/wsl-repository/Algorithms
+PWD = /home/jp/WIP/GITRepos/wsl-repository/Algorithms/Queue
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/364_interop
+WSL_INTEROP = /run/WSL/12_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/server/remoteExtensionHostProcess
 # environment
@@ -98,14 +95,18 @@ MAKELEVEL := 0
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
+# makefile (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Queue/Makefile', line 1)
+SRCS := Queue.cpp main.cpp
 # environment
 SHLVL = 0
+# makefile (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Queue/Makefile', line 5)
+CXX_FLAGS := -g
 # default
 MAKE_VERSION := 4.2.1
 # environment
 USER = jp
 # makefile
-.DEFAULT_GOAL := print
+.DEFAULT_GOAL := all
 # environment
 NAME = JP-WIN10
 # automatic
@@ -120,8 +121,6 @@ OLDPWD = /mnt/c/Program Files/Microsoft VS Code
 .VARIABLES := 
 # automatic
 *F = $(notdir $*)
-# makefile (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Makefile', line 5)
-TARGETS := ./PriorityQueueHeapImpl ./AlgorithmTests ./Queue/Queue ./Queue/main ./BubbleSort/BubbleSort ./Stack/main ./Stack/Stack
 # makefile
 MAKEFLAGS = pqrR
 # environment
@@ -132,12 +131,12 @@ MFLAGS = -pqrR
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
-# 'override' directive
-.SHELLSTATUS := 0
 # default
 MAKEFILES := 
 # automatic
 <F = $(notdir $<)
+# makefile (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Queue/Makefile', line 4)
+CXX := g++
 # environment
 LC_ALL = C
 # environment
@@ -160,8 +159,10 @@ TERM = xterm-256color
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
 WSL_DISTRO_NAME = Ubuntu
+# environment
+MOTD_SHOWN = update-motd
 # variable set hash-table stats:
-# Load=74/1024=7%, Rehash=0, Collisions=6/109=6%
+# Load=75/1024=7%, Rehash=0, Collisions=6/104=6%
 
 # Pattern-specific Variable Values
 
@@ -169,109 +170,76 @@ WSL_DISTRO_NAME = Ubuntu
 
 # Directories
 
-# . (device 2064, inode 25123): 11 files, no impossibilities.
+# . (device 2064, inode 48475): 10 files, no impossibilities.
 
-# 11 files, no impossibilities in 1 directories.
+# 10 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
-%:
-#  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Makefile', line 26):
-	$(info Making target $@)
-	$(CXX) $@.cpp -o $@
- 
+%.o: %.cpp
+#  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Queue/Makefile', line 16):
+	$(CXX) -c $< -o $@
 
 # 1 implicit rules, 0 (0.0%) terminal.
 
 # Files
 
 # Not a target:
-Stack/Stack:
+/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Queue/Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-10-16 20:20:31.5070418
+#  File has been updated.
+#  Successfully updated.
+
+all: QueueTest
+#  Command line target.
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  Last modified 2514-05-30 07:23:03.107374182
+#  File has been updated.
+#  Successfully updated.
+# automatic
+# @ := all
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := QueueTest
+# automatic
+# | := 
+# automatic
+# < := QueueTest
+# automatic
+# ^ := QueueTest
+# automatic
+# ? := QueueTest
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/10=10%
+#  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Queue/Makefile', line 9):
+	$(info Making $@ with $^)
+
+Queue.o: Queue.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Queue'
+#  Last modified 2021-10-16 20:30:41.9070418
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Queue/Makefile', line 16):
+	$(CXX) -c $< -o $@
+
+# Not a target:
+.SUFFIXES:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-Stack/main:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-all: PriorityQueueHeapImpl AlgorithmTests Queue/Queue Queue/main BubbleSort/BubbleSort Stack/main Stack/Stack
-#  Command line target.
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
-#  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Makefile', line 19):
-	$(info Making target $@)
-
-.PHONY: print BubbleSort
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-Queue/Queue:
+main.cpp:
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'Queue/Queue'
-#  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := Queue/Queue
-# automatic
-# % := 
-# automatic
-# * := Queue/Queue
-# automatic
-# + := 
-# automatic
-# | := 
-# automatic
-# < := 
-# automatic
-# ^ := 
-# automatic
-# ? := 
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/15=7%
-#  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Makefile', line 26):
-	$(info Making target $@)
-	$(CXX) $@.cpp -o $@
-
-print:
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-#  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Makefile', line 11):
-	$(info Making target $@)
-	$(info $$SRCFILES = $(SRCFILES))
-	$(info $$OBJFILES = $(OBJFILES))
-	$(info $$TARGETS = $(TARGETS))
-	$(info $$SRCDIRS = $(SRCDIRS))
-	$(info $$CXX = $(CXX))
-
-BubbleSort:
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-#  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Makefile', line 22):
-	$(info Making specific target $@)
-	$(CXX) $@/$@.cpp -static -o ./$@/lib$@.so
-
-AlgorithmTests:
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'AlgorithmTests'
-#  Last modified 2021-08-28 16:20:31.5186492
+#  Last modified 2021-10-16 20:30:15.4970418
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Makefile', line 26):
-	$(info Making target $@)
-	$(CXX) $@.cpp -o $@
 
 # Not a target:
 .DEFAULT:
@@ -279,53 +247,52 @@ AlgorithmTests:
 #  Modification time never checked.
 #  File has not been updated.
 
-PriorityQueueHeapImpl:
+# Not a target:
+Queue.cpp:
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'PriorityQueueHeapImpl'
-#  Last modified 2021-10-02 01:37:47.3980557
+#  Last modified 2021-10-16 20:30:15.4970418
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Makefile', line 26):
-	$(info Making target $@)
-	$(CXX) $@.cpp -o $@
 
-# Not a target:
-Queue/main:
+clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+#  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Queue/Makefile', line 19):
+	$(RM) $(OBJS) $(TARGET)
 
-# Not a target:
-BubbleSort/BubbleSort:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Makefile:
+main.o: main.cpp
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Makefile'
-#  Last modified 2021-09-30 18:52:31.3175092
+#  Implicit/static pattern stem: 'main'
+#  Last modified 2021-10-16 20:30:43.2570418
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Makefile', line 26):
- 
-	$(info Making target $@)
-	$(CXX) $@.cpp -o $@
+#  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Queue/Makefile', line 16):
+	$(CXX) -c $< -o $@
+
+QueueTest: Queue.o main.o
+#  Implicit rule search has not been done.
+#  Last modified 2021-10-16 20:30:43.7370418
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Queue/Makefile', line 12):
+	$(info Making $@ with $^)
+	$(CXX) $(CXX_FLAGS) $^ -o $@
 
 # files hash-table stats:
-# Load=14/1024=1%, Rehash=0, Collisions=0/40=0%
+# Load=10/1024=1%, Rehash=0, Collisions=2/32=6%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 25 / storage = 322 B / avg = 12 B
-# current buf: size = 8162 B / used = 322 B / count = 25 / avg = 12 B
+# strcache buffers: 1 (0) / strings = 21 / storage = 219 B / avg = 10 B
+# current buf: size = 8162 B / used = 219 B / count = 21 / avg = 10 B
 
-# strcache performance: lookups = 43 / hit rate = 41%
+# strcache performance: lookups = 38 / hit rate = 44%
 # hash-table stats:
-# Load=25/8192=0%, Rehash=0, Collisions=1/43=2%
-# Finished Make data base on Sat Oct 16 20:20:36 2021
+# Load=21/8192=0%, Rehash=0, Collisions=1/38=3%
+# Finished Make data base on Sun Oct 17 20:03:05 2021
 
  

@@ -33,3 +33,5 @@
 LinuxDev/PThreadTests
 LinuxDev/main
 LinuxDev/WSLTestNormal
+Algorithms/Queue/QueueTest
+Algorithms/Stack/StackTest

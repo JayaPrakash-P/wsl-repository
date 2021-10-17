@@ -1,0 +1,26 @@
+make -f "/home/jp/WIP/GITRepos/wsl-repository/LinuxDev/Makefile" --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/jp/WIP/GITRepos/wsl-repository/LinuxDev'
+echo "COMPILING SOURCE main.cpp INTO OBJECT main.o"
+g++ -c -Wfatal-errors -fpermissive main.cpp -o main.o
+echo CREATING OBJECTS
+echo Making WSLTestNormal from ./main.o...
+#@echo $^            = main.o#FIRST Prerequisite
+#@echo DollarAT       = WSLTestNormal#File name of the target of the rule.
+#@echo Dollar<        = main.o#FIRST Prerequisite ONLY
+#@echo Dollar?        = main.o#ALL Prerequisite newer than target
+g++ -Wfatal-errors -fpermissive -o WSLTestNormal ./main.o -lpthread
+echo "COMPILING SOURCE main_nostartfiles.cpp INTO OBJECT main_nostartfiles.o"
+g++ -c -Wfatal-errors -fpermissive main_nostartfiles.cpp -o main_nostartfiles.o
+echo CREATING OBJECTS
+echo Making WSLTestNoStartFiles from ./main_nostartfiles.o...
+g++ -Wfatal-errors -fpermissive -nostartfiles -o WSLTestNoStartFiles ./main_nostartfiles.o
+echo Inside all
+echo TARGET   = WSLTestNormal
+echo SRCFILES = ./main.cpp
+echo OBJFILES = ./main.o
+echo TARGET_NOSTART   = WSLTestNoStartFiles
+echo SRCFILES_NOSTART = ./main_nostartfiles.cpp
+echo OBJFILES_NOSTART = ./main_nostartfiles.o
+rm -f *.o
+make: Leaving directory '/home/jp/WIP/GITRepos/wsl-repository/LinuxDev'
+ 
