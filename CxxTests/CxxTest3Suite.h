@@ -1,7 +1,7 @@
 #include <cxxtest/TestSuite.h>
 #include <string.h>
 
-class CxxTestSuite5 : public CxxTest::TestSuite
+class CxxTestSuite333 : public CxxTest::TestSuite
 {
     char *_buffer;
 
