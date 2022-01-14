@@ -46,3 +46,16 @@ CxxTests/CxxTestRunner
 .vscode/dryrun.log
 .gitignore
 .vscode/targets.log
+Misc/MW/CppVersionCheck
+Misc/MW/optgraph
+Misc/MW/optgraph_V0
+Misc/MW/optgraph_V1
+Misc/MW/optgraph_V2
+Misc/MW/.vscode/configurationCache.log
+Misc/MW/.vscode/dryrun.log
+Misc/MW/.vscode/targets.log
+Misc/PerfOpt/optgraph
+Misc/PerfOpt/optgraph_V0
+Misc/PerfOpt/optgraph_V1
+Misc/PerfOpt/optgraph_V2
+Misc/InitializerList

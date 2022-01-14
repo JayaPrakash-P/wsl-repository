@@ -1,0 +1,10 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/jp/WIP/GITRepos/wsl-repository/Misc/MW",
+            "binaryPath": "/home/jp/WIP/GITRepos/wsl-repository/Misc/MW/optgraph_V0",
+            "binaryArgs": []
+        }
+    ]
+}

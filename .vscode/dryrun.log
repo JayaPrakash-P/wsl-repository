@@ -2,7 +2,6 @@ make all -f /home/jp/WIP/GITRepos/wsl-repository/Makefile --dry-run --always-mak
 make: Entering directory '/home/jp/WIP/GITRepos/wsl-repository'
 cxxtestgen --have-eh --abort-on-fail --root --error-printer -o CxxTests/CxxTestRunner.cpp
 g++ -c -o CxxTests/CxxTestRunner.o CxxTests/CxxTestRunner.cpp
- 
 cxxtestgen --have-eh --abort-on-fail --part -o CxxTests/CxxTest3Suite.cpp CxxTests/CxxTest3Suite.h
 g++ -c -o CxxTests/CxxTest3Suite.o CxxTests/CxxTest3Suite.cpp
 cxxtestgen --have-eh --abort-on-fail --part -o CxxTests/CxxTest1Suite.cpp CxxTests/CxxTest1Suite.h

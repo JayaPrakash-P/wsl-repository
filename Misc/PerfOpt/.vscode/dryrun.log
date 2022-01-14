@@ -1,0 +1,11 @@
+make all -f /home/jp/WIP/GITRepos/wsl-repository/Misc/MW/Makefile --dry-run --keep-going --print-directory
+make: Entering directory '/home/jp/WIP/GITRepos/wsl-repository/Misc/MW'
+g++     optgraph_V1.cpp   -o optgraph_V1
+ 
+g++     CppVersionCheck.cpp   -o CppVersionCheck
+g++     optgraph_V2.cpp   -o optgraph_V2
+g++     optgraph_V0.cpp   -o optgraph_V0
+g++     optgraph.cpp   -o optgraph
+rm -rf optgraph_V1.o CppVersionCheck.o optgraph_V2.o optgraph_V0.o optgraph.o
+make: Leaving directory '/home/jp/WIP/GITRepos/wsl-repository/Misc/MW'
+ 
