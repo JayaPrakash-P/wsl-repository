@@ -42,3 +42,7 @@ Algorithms/Trees/Heap
 =======
 =======
 >>>>>>> a93c38fddb6c586cb5c42c7db91974f8d761ab19
+CxxTests/CxxTestRunner
+.vscode/dryrun.log
+.gitignore
+.vscode/targets.log
