@@ -11,21 +11,24 @@ class Thread
 {
     public:
         Thread(unsigned int threadId);
-        virtual ~Thread();
+        ~Thread();
 
         void AddJob();
 
     private:
         Thread(const Thread& other)             = delete;
+        Thread(Thread&& other)                  = delete;
         Thread& operator=(const Thread& other)  = delete;
+        Thread& operator=(Thread&& other)       = delete;
 
-         void Start();
+        void Run();
 
-        std::thread myThread;
-        unsigned int threadID;
-        bool keepRunning;
+        std::thread             myThread;
+        unsigned int            threadID;
+        bool                    procesJob;
+        bool                    keepRunning;
 
-        std::mutex mtxActivate;
+        std::mutex              mtxActivate;
         std::condition_variable condActivate;
 };
 

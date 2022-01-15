@@ -1,22 +1,25 @@
-#include "../include/ThreadPoolImpl.h"
+#include "ThreadPoolImpl.h"
 
-ThreadPool::ThreadPool(unsigned int noOfThreads)
-    : noOfThreads(noOfThreads),
-      keepRunning(true)
+ThreadPool::ThreadPool() : noOfThreads(0), keepRunning(true)
 {
-    std::cout << "Constructing ThreadPool with " << noOfThreads << " threads\n";
-    threadPtrList.reserve(noOfThreads);
+    std::cout << "Constructing ThreadPool...\n";
 }
 
-void ThreadPool::Init()
+void ThreadPool::SpawnThreads(unsigned int threadCount) 
 {
-    for(auto i = 1 ; i <= noOfThreads ; ++i)
-    {
-        threadPtrList.emplace_back(std::make_unique<std::thread>(&ThreadPool::Start, this, i));
-    }
+    //for(auto i = 1 ; i <= threadCount ; ++i)
+    //    threadPool.emplace_back(std::make_unique<Thread>(i));
+    for(auto i = 1 ; i <= threadCount ; ++i)
+        threadPool.emplace_back(std::make_unique<std::thread>(&ThreadPool::Run, this, i));
+    
+    noOfThreads = threadPool.size();
+    
+    assert(noOfThreads == threadCount);
+    
+    std::cout << "Spawned " << threadCount << " Threads...\n";
 }
 
-void ThreadPool::Start(int threadID)
+void ThreadPool::Run(int threadID)
 {
     std::cout << "Spawned Thread#" << threadID << std::endl;
 
@@ -25,20 +28,20 @@ void ThreadPool::Start(int threadID)
         Job myJob;
         {
             std::unique_lock<std::mutex> lck(mtxJobQueue);
-            std::cout << "Thread#" << threadID << " - Before condActivate.wait\n";
+            std::cout << "Thread#" << threadID << " - Waiting for job...\n";
             condActivateJob.wait(lck, [this]{return ( (!jobQueue.empty()) || (!keepRunning) );});
             if(!keepRunning)
             {
                 std::cout << "Thread#" << threadID << " exiting...\n";
                 break;
             }
-
             std::cout << "Thread#" << threadID << " executing the job...\n";
-            std::this_thread::sleep_for(std::chrono::seconds(5));//Execution here
             myJob = jobQueue.front();
             jobQueue.pop();
         }
         myJob();
+        std::cout << "Thread#" << threadID << " sleeping for 10 seconds...\n";
+        std::this_thread::sleep_for(std::chrono::seconds(10));//For testing
     }
     std::cout << "Thread#" << threadID << " Exited!!!\n";
 }
@@ -48,6 +51,7 @@ void ThreadPool::AssignWork(Job job)
     std::cout << "AssignWork\n";
     std::unique_lock<std::mutex> lck(mtxJobQueue);
     jobQueue.push(job);
+    condActivateJob.notify_one();
 }
 
 ThreadPool::~ThreadPool()
@@ -58,7 +62,7 @@ ThreadPool::~ThreadPool()
         condActivateJob.notify_all();
     }
     std::cout << "Joining Threads..." << std::endl;
-    for(auto &threadPtr : threadPtrList)
+    for(auto &threadPtr : threadPool)
         threadPtr->join();
     std::cout << "Joined Threads..." << std::endl;
 }
