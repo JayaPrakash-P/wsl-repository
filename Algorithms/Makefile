@@ -1,27 +1,28 @@
-#SRCFILES:=$(wildcard *.cpp)
-SRCFILES:=$(shell find . -name '*.cpp')
-SRCDIRS:=$(patsubst %/,%,$(dir $(wildcard */)))
-OBJFILES:=$(SRCFILES:.cpp = .o)
-TARGETS:=$(basename $(SRCFILES))
-#SRCDIRS:=$(basename $(SRCFILES))
+SRCFILES	:=$(wildcard *.cpp)
+OBJFILES	:=$(SRCFILES:.cpp=.o)
+TARGETS		:=$(basename $(SRCFILES))
+GTEST_FLAGS :=-lgtest -lgtest_main -pthread
 
-.PHONY: print BubbleSort
+.PHONY: print BubbleSort all
 
 print:
 	$(info Making target $@)
 	$(info $$SRCFILES = $(SRCFILES))
 	$(info $$OBJFILES = $(OBJFILES))
 	$(info $$TARGETS = $(TARGETS))
-	$(info $$SRCDIRS = $(SRCDIRS))
 	$(info $$CXX = $(CXX))
 
 all:$(TARGETS)
 	$(info Making target $@)
 
-BubbleSort:
-	$(info Making specific target $@)
-	$(CXX) $@/$@.cpp -static -o ./$@/lib$@.so
-
-%:
+% : %.o
 	$(info Making target $@)
-	$(CXX) $@.cpp -o $@
+	$(CXX) $@.o $(GTEST_FLAGS) -o $@
+
+%.o : %.cpp
+	$(info Making target $@)
+	$(CXX) -c $^ -o $@
+
+clean:
+	$(info Making target $@)
+	rm -rf $(OBJFILES) $(TARGETS)

@@ -81,4 +81,25 @@ private:
     Time entryTime, exitTime;
 };
 
+template <typename T = int, size_t N>
+void PrintArray(const T inputData[])
+{
+    std::cout << "\n[ ";
+    for(auto i = 0 ; i < N ; ++i)
+        std::cout << inputData[i] << ' ';
+    std::cout << "]\n";
+}
+
+template <typename T = int, size_t N>
+void GenerateRandomDataSet(T inputData[])
+{
+    /* initialize random seed: */
+    srand (time(NULL));
+    
+    for(auto i = 0 ; i < N ; ++i)
+        inputData[i] = (rand()%N);
+    
+    //std::cout << "Generated Random Data Set : " ; PrintArray<T,N>(inputData);
+}
+
 #endif //_UTILS_H_
