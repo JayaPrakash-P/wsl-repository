@@ -64,3 +64,4 @@ Misc/InitializerList
 .vscode/targets.log
 CxxTests/Runner
 RandomTests/SmartPointers
+C/Linkage/LinkageTest

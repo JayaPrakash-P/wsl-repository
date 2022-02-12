@@ -6,7 +6,7 @@ make all -f /home/jp/WIP/GITRepos/wsl-repository/Makefile --print-data-base --no
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Feb 12 14:43:54 2022
+# Make data base, printed on Sun Feb 13 00:38:29 2022
 
 # Variables
 
@@ -277,8 +277,8 @@ clean:
 
 # Not a target:
 CxxTests/CxxTest3Suite.o:
-#  Implicit rule search has not been done.
  
+#  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -328,6 +328,6 @@ CxxTests/CxxTestRunner: CxxTests/CxxTestRunner.o CxxTests/CxxTest3Suite.o CxxTes
 # strcache performance: lookups = 52 / hit rate = 36%
 # hash-table stats:
 # Load=33/8192=0%, Rehash=0, Collisions=1/52=2%
-# Finished Make data base on Sat Feb 12 14:43:54 2022
+# Finished Make data base on Sun Feb 13 00:38:29 2022
 
  
