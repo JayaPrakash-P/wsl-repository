@@ -59,3 +59,8 @@ Misc/PerfOpt/optgraph_V0
 Misc/PerfOpt/optgraph_V1
 Misc/PerfOpt/optgraph_V2
 Misc/InitializerList
+.vscode/configurationCache.log
+.vscode/dryrun.log
+.vscode/targets.log
+CxxTests/Runner
+RandomTests/SmartPointers
