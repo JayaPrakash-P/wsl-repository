@@ -6,7 +6,7 @@ make all -f /home/jp/WIP/GITRepos/wsl-repository/Makefile --print-data-base --no
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Feb 13 00:38:29 2022
+# Make data base, printed on Sun Feb 13 18:33:48 2022
 
 # Variables
 
@@ -15,7 +15,7 @@ make all -f /home/jp/WIP/GITRepos/wsl-repository/Makefile --print-data-base --no
 # automatic
 ?F = $(notdir $?)
 # environment
-WSLENV = VSCODE_WSL_EXT_LOCATION/up
+WSLENV = VSCODE_WSL_EXT_LOCATION/up:VSCODE_SERVER_TAR/up
 # default
 .SHELLFLAGS := -c
 # environment
@@ -35,7 +35,7 @@ SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
-_ = /home/jp/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/node
+_ = /home/jp/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/node
 # makefile (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 1)
 MAKEFILE_LIST :=  /home/jp/WIP/GITRepos/wsl-repository/Makefile
 # 'override' directive
@@ -55,13 +55,15 @@ VSCODE_CWD = /mnt/c/Program Files/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/jp/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Python39/Scripts/:/mnt/c/Program Files/Python39/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin:/mnt/c/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/MinGW/bin:/mnt/c/Program Files/Intel/WiFi/bin/:/mnt/c/Program Files/Common Files/Intel/WirelessCommon/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files (x86)/dotnet/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Users/jayap/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/Intel/WiFi/bin/:/mnt/c/Program Files/Common Files/Intel/WirelessCommon/:/mnt/c/Users/jayap/AppData/Local/atom/bin:/mnt/c/Users/jayap/AppData/Local/GitHubDesktop/bin:/mnt/c/msys64/mingw64/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/jayap/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/jayap/.dotnet/tools:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2020.3.3/bin:/mnt/c/WinPython64/WPy64-3910:/snap/bin
+PATH = /home/jp/.vscode-server/bin/f80445acd5a3dadef24aa209168452a3d97cc326/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Python39/Scripts/:/mnt/c/Program Files/Python39/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin:/mnt/c/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/MinGW/bin:/mnt/c/Program Files/Intel/WiFi/bin/:/mnt/c/Program Files/Common Files/Intel/WirelessCommon/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files (x86)/dotnet/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Users/jayap/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/Intel/WiFi/bin/:/mnt/c/Program Files/Common Files/Intel/WirelessCommon/:/mnt/c/Users/jayap/AppData/Local/atom/bin:/mnt/c/Users/jayap/AppData/Local/GitHubDesktop/bin:/mnt/c/msys64/mingw64/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/jayap/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/jayap/.dotnet/tools:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2020.3.3/bin:/mnt/c/WinPython64/WPy64-3910:/snap/bin
 # makefile (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 8)
 CXXTESTDIR = ./CxxTests
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-03fd512a-d05a-46b6-a2c7-af9791017f30.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-04963966-bfc3-46a1-aa3a-aa260daaec76.sock
+# environment
+VSCODE_SERVER_TAR = /mnt/c/Users/jayap/AppData/Local/Temp/vscode-remote-wsl/f80445acd5a3dadef24aa209168452a3d97cc326/vscode-server-stable-linux-x64.tar.gz
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -75,9 +77,9 @@ PWD = /home/jp/WIP/GITRepos/wsl-repository
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/30_interop
+WSL_INTEROP = /run/WSL/4121_interop
 # environment
-VSCODE_AMD_ENTRYPOINT = vs/server/remoteExtensionHostProcess
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
 # environment
 HOME = /home/jp
 # makefile (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 9)
@@ -146,8 +148,6 @@ HOSTTYPE = x86_64
 SUFFIXES := 
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
-# environment
-VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH = /home/jp/.vscode-server/bin/899d46d82c4c95423fb7e10e68eba52050e30ba3/remote/node_modules
 # default
 .RECIPEPREFIX := 
 # environment
@@ -158,10 +158,8 @@ TERM = xterm-256color
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
 WSL_DISTRO_NAME = Ubuntu
-# environment
-MOTD_SHOWN = update-motd
 # variable set hash-table stats:
-# Load=75/1024=7%, Rehash=0, Collisions=8/116=7%
+# Load=74/1024=7%, Rehash=0, Collisions=8/115=7%
 
 # Pattern-specific Variable Values
 
@@ -277,11 +275,11 @@ clean:
 
 # Not a target:
 CxxTests/CxxTest3Suite.o:
- 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
+ 
 CxxTests: CxxTests/CxxTestRunner
 #  Implicit rule search has not been done.
 #  Last modified 2022-02-01 13:05:49.2591423
@@ -328,6 +326,6 @@ CxxTests/CxxTestRunner: CxxTests/CxxTestRunner.o CxxTests/CxxTest3Suite.o CxxTes
 # strcache performance: lookups = 52 / hit rate = 36%
 # hash-table stats:
 # Load=33/8192=0%, Rehash=0, Collisions=1/52=2%
-# Finished Make data base on Sun Feb 13 00:38:29 2022
+# Finished Make data base on Sun Feb 13 18:33:48 2022
 
  

@@ -65,3 +65,4 @@ Misc/InitializerList
 CxxTests/Runner
 RandomTests/SmartPointers
 C/Linkage/LinkageTest
+C/MultiThreading/PThread
