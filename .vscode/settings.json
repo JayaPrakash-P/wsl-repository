@@ -89,7 +89,11 @@
         "variant": "cpp",
         "stdlib.h": "c",
         "time.h": "c",
-        "threads.h": "c"
+        "threads.h": "c",
+        "mman.h": "c",
+        "fcntl.h": "c",
+        "stat.h": "c",
+        "string.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

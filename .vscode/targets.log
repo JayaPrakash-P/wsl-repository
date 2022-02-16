@@ -6,7 +6,7 @@ make all -f /home/jp/WIP/GITRepos/wsl-repository/Makefile --print-data-base --no
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Feb 13 18:33:48 2022
+# Make data base, printed on Wed Feb 16 10:23:19 2022
 
 # Variables
 
@@ -15,11 +15,9 @@ make all -f /home/jp/WIP/GITRepos/wsl-repository/Makefile --print-data-base --no
 # automatic
 ?F = $(notdir $?)
 # environment
-WSLENV = VSCODE_WSL_EXT_LOCATION/up:VSCODE_SERVER_TAR/up
+WSLENV = VSCODE_WSL_EXT_LOCATION/up
 # default
 .SHELLFLAGS := -c
-# environment
-VSCODE_AGENT_FOLDER = /home/jp/.vscode-server
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -61,9 +59,7 @@ CXXTESTDIR = ./CxxTests
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-04963966-bfc3-46a1-aa3a-aa260daaec76.sock
-# environment
-VSCODE_SERVER_TAR = /mnt/c/Users/jayap/AppData/Local/Temp/vscode-remote-wsl/f80445acd5a3dadef24aa209168452a3d97cc326/vscode-server-stable-linux-x64.tar.gz
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-f425bf0a-63d6-4976-9a75-b737571a24e1.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -77,7 +73,7 @@ PWD = /home/jp/WIP/GITRepos/wsl-repository
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/4121_interop
+WSL_INTEROP = /run/WSL/186_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
 # environment
@@ -113,7 +109,7 @@ NAME = JP-WIN10
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/jayap/.vscode/extensions/ms-vscode-remote.remote-wsl-0.63.13
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/jayap/.vscode/extensions/ms-vscode-remote.remote-wsl-0.64.2
 # default
 MAKE_COMMAND := make
 # environment
@@ -159,7 +155,7 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
 WSL_DISTRO_NAME = Ubuntu
 # variable set hash-table stats:
-# Load=74/1024=7%, Rehash=0, Collisions=8/115=7%
+# Load=72/1024=7%, Rehash=0, Collisions=8/113=7%
 
 # Pattern-specific Variable Values
 
@@ -326,6 +322,6 @@ CxxTests/CxxTestRunner: CxxTests/CxxTestRunner.o CxxTests/CxxTest3Suite.o CxxTes
 # strcache performance: lookups = 52 / hit rate = 36%
 # hash-table stats:
 # Load=33/8192=0%, Rehash=0, Collisions=1/52=2%
-# Finished Make data base on Sun Feb 13 18:33:48 2022
+# Finished Make data base on Wed Feb 16 10:23:19 2022
 
  
