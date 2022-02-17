@@ -6,7 +6,7 @@ make all -f /home/jp/WIP/GITRepos/wsl-repository/Makefile --print-data-base --no
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Feb 16 10:23:19 2022
+# Make data base, printed on Fri Feb 18 00:56:47 2022
 
 # Variables
 
@@ -59,7 +59,7 @@ CXXTESTDIR = ./CxxTests
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-f425bf0a-63d6-4976-9a75-b737571a24e1.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-0781cbe4-128d-4720-af78-e2c148fc22a1.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -73,7 +73,7 @@ PWD = /home/jp/WIP/GITRepos/wsl-repository
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/186_interop
+WSL_INTEROP = /run/WSL/1976_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
 # environment
@@ -195,6 +195,7 @@ all: CxxTests
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
+ 
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 
@@ -275,7 +276,6 @@ CxxTests/CxxTest3Suite.o:
 #  Modification time never checked.
 #  File has not been updated.
 
- 
 CxxTests: CxxTests/CxxTestRunner
 #  Implicit rule search has not been done.
 #  Last modified 2022-02-01 13:05:49.2591423
@@ -322,6 +322,6 @@ CxxTests/CxxTestRunner: CxxTests/CxxTestRunner.o CxxTests/CxxTest3Suite.o CxxTes
 # strcache performance: lookups = 52 / hit rate = 36%
 # hash-table stats:
 # Load=33/8192=0%, Rehash=0, Collisions=1/52=2%
-# Finished Make data base on Wed Feb 16 10:23:19 2022
+# Finished Make data base on Fri Feb 18 00:56:47 2022
 
  
