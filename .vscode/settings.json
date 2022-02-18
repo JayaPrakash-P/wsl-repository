@@ -93,7 +93,9 @@
         "mman.h": "c",
         "fcntl.h": "c",
         "stat.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "stdio.h": "c",
+        "dlfcn.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
