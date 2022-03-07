@@ -1,0 +1,5 @@
+Linker Option:
+$(MSBuildThisFileDirectory)..\..\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x86\Debug\gtest_maind.lib;%(AdditionalDependencies)
+%(AdditionalDependencies)
+
+/OUT:"C:\JP\Work\C++\GitHub\wsl-repository\gtest\Debug\gtest.exe" /MANIFEST /NXCOMPAT /PDB:"C:\JP\Work\C++\GitHub\wsl-repository\gtest\Debug\gtest.pdb" /DYNAMICBASE "C:\JP\Work\C++\GitHub\wsl-repository\gtest\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.4\build\native\..\..\lib\native\v140\windesktop\msvcstl\static\rt-dyn\x86\Debug\gtestd.lib" "kernel32.lib" "user32.lib" "gdi32.lib" "winspool.lib" "comdlg32.lib" "advapi32.lib" "shell32.lib" "ole32.lib" "oleaut32.lib" "uuid.lib" "odbc32.lib" "odbccp32.lib" /IMPLIB:"C:\JP\Work\C++\GitHub\wsl-repository\gtest\Debug\gtest.lib" /DEBUG /MACHINE:X86 /SAFESEH /PGD:"C:\JP\Work\C++\GitHub\wsl-repository\gtest\Debug\gtest.pgd" /SUBSYSTEM:CONSOLE /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /ManifestFile:"Debug\gtest.exe.intermediate.manifest" /LTCGOUT:"Debug\gtest.iobj" /ERRORREPORT:PROMPT /ILK:"Debug\gtest.ilk" /NOLOGO /TLBID:1 

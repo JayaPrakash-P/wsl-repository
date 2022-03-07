@@ -66,3 +66,4 @@ CxxTests/Runner
 RandomTests/SmartPointers
 C/Linkage/LinkageTest
 C/MultiThreading/PThread
+/gtest/.vs/gtest/v16
