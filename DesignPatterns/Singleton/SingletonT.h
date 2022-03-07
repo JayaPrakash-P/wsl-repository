@@ -23,10 +23,14 @@ CSingleton& CSingleton::GetInstance()
     static CSingleton instance;
     return instance;
 }
+
 template <class T>
 class Singleton
 {
 public:
+  Singleton(const Singleton&) = delete;
+  Singleton operator=(const Singleton&) = delete;
+
   static T& getInstance()
   {
     static T instance;
@@ -43,10 +47,6 @@ protected:
   {
     std::cout << "~Singleton()\n";
   }
-
-private:
-  Singleton(const Singleton&) = delete;
-  Singleton operator=(const Singleton) = delete;
 
 };
 
