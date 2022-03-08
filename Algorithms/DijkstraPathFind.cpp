@@ -1,4 +1,4 @@
-//Courteousy : https://codereview.stackexchange.com/questions/152733/dijkstra-path-finding-in-c-is-15x-slower-than-c-version#include <iostream>
+//Courteousy : https://codereview.stackexchange.com/questions/152733/dijkstra-path-finding-in-c-is-15x-slower-than-c-version
 #include <fstream>
 #include <algorithm>
 #include <vector>

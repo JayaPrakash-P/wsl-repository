@@ -6,7 +6,7 @@ make all -f /home/jp/WIP/GITRepos/wsl-repository/Makefile --print-data-base --no
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Mar  5 15:16:09 2022
+# Make data base, printed on Tue Mar  8 15:52:32 2022
 
 # Variables
 
@@ -55,7 +55,7 @@ CXXTESTDIR = ./CxxTests
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-a55e4a44-6f54-4176-8783-6942ac4b482b.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-e8ad1f81-1e2d-49bc-b809-9c22e76b4a49.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # automatic
@@ -67,7 +67,7 @@ PWD = /home/jp/WIP/GITRepos/wsl-repository
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/12_interop
+WSL_INTEROP = /run/WSL/9_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
 # environment
@@ -282,8 +282,8 @@ CxxTests/CxxTestRunner.o: CxxTests/CxxTestRunner.cpp
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
-# variable set hash-table stats:
  
+# variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 #  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 23):
 	$(CXX) -c -o $@ $^
@@ -312,6 +312,6 @@ CxxTests/CxxTestRunner: CxxTests/CxxTestRunner.o CxxTests/CxxTest3Suite.o CxxTes
 # strcache performance: lookups = 52 / hit rate = 36%
 # hash-table stats:
 # Load=33/8192=0%, Rehash=0, Collisions=1/52=2%
-# Finished Make data base on Sat Mar  5 15:16:10 2022
+# Finished Make data base on Tue Mar  8 15:52:32 2022
 
  
