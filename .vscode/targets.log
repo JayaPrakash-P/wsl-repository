@@ -5,9 +5,8 @@ make all -f /home/jp/WIP/GITRepos/wsl-repository/Makefile --print-data-base --no
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Sat Apr 30 10:47:33 2022
+# Make data base, printed on Sat Apr 30 17:17:39 2022
 
 # Variables
 
@@ -60,7 +59,7 @@ CXXTESTDIR = ./CxxTests
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-264da37b-bd29-47d2-9a3f-a034d61420f2.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-3a57db4f-c2dc-4daa-a391-1de1c9a12b33.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -74,7 +73,7 @@ PWD = /home/jp/WIP/GITRepos/wsl-repository
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/89_interop
+WSL_INTEROP = /run/WSL/25043_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -110,7 +109,7 @@ NAME = JP-WIN10
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/jayap/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.0
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/jayap/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.2
 # default
 MAKE_COMMAND := make
 # environment
@@ -276,6 +275,7 @@ CxxTests/CxxTest3Suite.o:
 #  Modification time never checked.
 #  File has not been updated.
 
+ 
 CxxTests: CxxTests/CxxTestRunner
 #  Implicit rule search has not been done.
 #  Last modified 2022-02-01 13:05:49.2591423
@@ -295,7 +295,6 @@ CxxTests/CxxTestRunner.o: CxxTests/CxxTestRunner.cpp
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/5=0%
- 
 #  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 23):
 	$(CXX) -c -o $@ $^
 
@@ -323,6 +322,6 @@ CxxTests/CxxTestRunner: CxxTests/CxxTestRunner.o CxxTests/CxxTest3Suite.o CxxTes
 # strcache performance: lookups = 52 / hit rate = 36%
 # hash-table stats:
 # Load=33/8192=0%, Rehash=0, Collisions=1/52=2%
-# Finished Make data base on Sat Apr 30 10:47:33 2022
+# Finished Make data base on Sat Apr 30 17:17:39 2022
 
  

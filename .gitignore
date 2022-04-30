@@ -71,3 +71,6 @@ IPC/SocketProgramming/SocketServer
 IPC/SocketProgramming/SocketClient
 .vscode/targets.log
 .vscode/targets.log
+IPC/SocketProgramming/SimpleClientServer
+.vscode/targets.log
+.vscode/targets.log
