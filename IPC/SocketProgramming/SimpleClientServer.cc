@@ -58,7 +58,6 @@ void SocketServer()
     std::cout << "clientData : " << clientData << std::endl;
     
     char serverData[]="Hello from server!";
-    std::cout << "sizeof(serverData) : " << sizeof(serverData) << std::endl;
     write(clientFD, serverData, strlen(serverData));
     
     std::this_thread::sleep_for(std::chrono::seconds(5));
