@@ -67,3 +67,7 @@ RandomTests/SmartPointers
 C/Linkage/LinkageTest
 C/MultiThreading/PThread
 /gtest/.vs/gtest/v16
+IPC/SocketProgramming/SocketServer
+IPC/SocketProgramming/SocketClient
+.vscode/targets.log
+.vscode/targets.log
