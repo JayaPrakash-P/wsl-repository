@@ -76,3 +76,6 @@ IPC/SocketProgramming/SimpleClientServer
 .vscode/targets.log
 IPC/SharedMemory/SharedMemory
 .vscode/targets.log
+HackerRank/AttrParser/HRMLParser
+.vscode/configurationCache.log
+.vscode/targets.log
