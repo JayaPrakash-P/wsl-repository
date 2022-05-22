@@ -79,3 +79,5 @@ IPC/SharedMemory/SharedMemory
 HackerRank/AttrParser/HRMLParser
 .vscode/configurationCache.log
 .vscode/targets.log
+.vscode/targets.log
+.vscode/configurationCache.log
