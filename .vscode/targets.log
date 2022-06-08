@@ -6,7 +6,7 @@ make all -f /home/jp/WIP/GITRepos/wsl-repository/Makefile --print-data-base --no
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun May 22 18:48:59 2022
+# Make data base, printed on Wed Jun  8 16:36:33 2022
 
 # Variables
 
@@ -49,13 +49,13 @@ VSCODE_CWD = /mnt/c/Program Files/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/jp/.vscode-server/bin/dfd34e8260c270da74b5c2d86d61aee4b6d56977/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Python/Python310/Scripts/:/mnt/c/Program Files/Python/Python310/:/mnt/c/Program Files/Eclipse Foundation/jdk-8.0.302.8-hotspot/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin:/mnt/c/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/MinGW/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files (x86)/dotnet/:/mnt/c/Program Files (x86)/Google/Cloud SDK/google-cloud-sdk/bin:/mnt/c/Users/jayap/AppData/Roaming/Python/Python310/Scripts:/mnt/c/Users/jayap/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/jayap/AppData/Local/atom/bin:/mnt/c/Users/jayap/AppData/Local/GitHubDesktop/bin:/mnt/c/msys64/mingw64/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/jayap/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/jayap/.dotnet/tools:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2020.3.3/bin:/mnt/c/WinPython64/WPy64-3910
+PATH = /home/jp/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Python/Python310/Scripts/:/mnt/c/Program Files/Python/Python310/:/mnt/c/Program Files/Eclipse Foundation/jdk-8.0.302.8-hotspot/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin:/mnt/c/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/MinGW/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files (x86)/dotnet/:/mnt/c/Program Files (x86)/Google/Cloud SDK/google-cloud-sdk/bin:/mnt/c/Users/jayap/AppData/Roaming/Python/Python310/Scripts:/mnt/c/Users/jayap/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/jayap/AppData/Local/atom/bin:/mnt/c/Users/jayap/AppData/Local/GitHubDesktop/bin:/mnt/c/msys64/mingw64/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/jayap/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/jayap/.dotnet/tools:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2020.3.3/bin:/mnt/c/WinPython64/WPy64-3910
 # makefile (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 8)
 CXXTESTDIR = ./CxxTests
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-cb055133-ca17-44b6-a7a7-1b6020a7c4de.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-8924de38-f2b1-45b0-bbce-c1be2e8d59dc.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # automatic
@@ -67,7 +67,7 @@ PWD = /home/jp/WIP/GITRepos/wsl-repository
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/15897_interop
+WSL_INTEROP = /run/WSL/1467_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -101,7 +101,7 @@ NAME = JP-WIN10
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/jayap/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.2
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/jayap/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.3
 # default
 MAKE_COMMAND := make
 # default
@@ -120,6 +120,8 @@ MFLAGS = -pqrR
 CXXTESTFLAGS = --have-eh --abort-on-fail
 # automatic
 +F = $(notdir $+)
+# environment
+VSCODE_HANDLES_SIGPIPE = true
 # default
 MAKEFILES := 
 # automatic
@@ -145,7 +147,7 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
 WSL_DISTRO_NAME = Ubuntu
 # variable set hash-table stats:
-# Load=67/1024=7%, Rehash=0, Collisions=8/108=7%
+# Load=68/1024=7%, Rehash=0, Collisions=8/109=7%
 
 # Pattern-specific Variable Values
 
@@ -275,9 +277,9 @@ CxxTests: CxxTests/CxxTestRunner
 #  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 16):
 	$(info $$OBJS is [${OBJS}])
 	rm -f $(CXXTESTDIR)/*~ $(CXXTESTDIR)/*.cpp $(CXXTESTDIR)/*.o
+ 
 
 CxxTests/CxxTestRunner.o: CxxTests/CxxTestRunner.cpp
- 
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'CxxTests/CxxTestRunner'
 #  File does not exist.
@@ -312,6 +314,6 @@ CxxTests/CxxTestRunner: CxxTests/CxxTestRunner.o CxxTests/CxxTest3Suite.o CxxTes
 # strcache performance: lookups = 52 / hit rate = 36%
 # hash-table stats:
 # Load=33/8192=0%, Rehash=0, Collisions=1/52=2%
-# Finished Make data base on Sun May 22 18:48:59 2022
+# Finished Make data base on Wed Jun  8 16:36:34 2022
 
  

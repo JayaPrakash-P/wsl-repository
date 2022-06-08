@@ -89,6 +89,34 @@ void DisplayandomData(int* randomData)
     printf("\n");
 }
 
+void RemoveNodes(SNode** headNode, int data)
+{
+    SNode* temp = *headNode;
+    SNode* prevNode = temp;
+
+    while( (temp != NULL) && (temp->nodeData == data))
+    {
+        *headNode = temp->nextNode;
+        free(temp);
+        temp = *headNode;
+    }
+
+    while(temp != NULL)
+    {
+        if(temp->nodeData == data)
+        {
+            prevNode->nextNode = temp->nextNode;
+            free(temp);
+            temp = prevNode;
+        }
+        else
+        {
+            prevNode = temp;
+        }
+        temp = temp->nextNode;
+    }
+}
+
 void main()
 {
     list.listHead=NULL;
@@ -102,5 +130,10 @@ void main()
         InsertAtBeginning(randomData[i]);
     }
     printf("\n");
+    DisplayList();
+    printf("Enter node data to remove:");
+    int data;
+    scanf("%d",&data);
+    RemoveNodes(&list.listHead, data);
     DisplayList();
 }
