@@ -6,7 +6,7 @@ make all -f /home/jp/WIP/GITRepos/wsl-repository/Makefile --print-data-base --no
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Sep  3 22:53:17 2022
+# Make data base, printed on Sat Sep 17 13:05:17 2022
 
 # Variables
 
@@ -15,11 +15,9 @@ make all -f /home/jp/WIP/GITRepos/wsl-repository/Makefile --print-data-base --no
 # automatic
 ?F = $(notdir $?)
 # environment
-WSLENV = VSCODE_WSL_EXT_LOCATION/up
+WSLENV = VSCODE_WSL_EXT_LOCATION/up:VSCODE_SERVER_TAR/up
 # default
 .SHELLFLAGS := -c
-# environment
-VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -38,8 +36,6 @@ _ = /usr/bin/sh
 MAKEFILE_LIST :=  /home/jp/WIP/GITRepos/wsl-repository/Makefile
 # 'override' directive
 GNUMAKEFLAGS := 
-# environment
-VSCODE_VERBOSE_LOGGING = true
 # makefile (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 13)
 OBJS = $(CXXTESTDIR)/CxxTestRunner.o $(TESTS:$(CXXTESTDIR)/%.h=$(CXXTESTDIR)/%.o)
 # makefile (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 12)
@@ -49,25 +45,25 @@ VSCODE_CWD = /mnt/c/Program Files/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/jp/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Python/Python310/Scripts/:/mnt/c/Program Files/Python/Python310/:/mnt/c/Program Files/Eclipse Foundation/jdk-8.0.302.8-hotspot/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin:/mnt/c/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/MinGW/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files (x86)/dotnet/:/mnt/c/Program Files (x86)/Google/Cloud SDK/google-cloud-sdk/bin:/mnt/c/Users/jayap/AppData/Roaming/Python/Python310/Scripts:/mnt/c/Users/jayap/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/jayap/AppData/Local/atom/bin:/mnt/c/Users/jayap/AppData/Local/GitHubDesktop/bin:/mnt/c/msys64/mingw64/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/jayap/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/jayap/.dotnet/tools:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2020.3.3/bin:/mnt/c/WinPython64/WPy64-3910
+PATH = /home/jp/.vscode-server/bin/784b0177c56c607789f9638da7b6bf3230d47a8c/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Python/Python310/Scripts/:/mnt/c/Program Files/Python/Python310/:/mnt/c/Program Files/Eclipse Foundation/jdk-8.0.302.8-hotspot/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin:/mnt/c/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/MinGW/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files (x86)/dotnet/:/mnt/c/Program Files (x86)/Google/Cloud SDK/google-cloud-sdk/bin:/mnt/c/Users/jayap/AppData/Roaming/Python/Python310/Scripts:/mnt/c/Users/jayap/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/jayap/AppData/Local/atom/bin:/mnt/c/Users/jayap/AppData/Local/GitHubDesktop/bin:/mnt/c/msys64/mingw64/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/jayap/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/jayap/.dotnet/tools:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2020.3.3/bin:/mnt/c/WinPython64/WPy64-3910
 # makefile (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 8)
 CXXTESTDIR = ./CxxTests
 # environment
-VSCODE_LOG_STACK = false
+ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-aa84d9ba-0e11-404f-884c-f4fdb5a69f74.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-73c63c73-7aeb-4331-9c8c-cc9d616d6452.sock
+# environment
+VSCODE_SERVER_TAR = /mnt/c/Users/jayap/AppData/Local/Temp/vscode-remote-wsl/784b0177c56c607789f9638da7b6bf3230d47a8c/vscode-server-stable-linux-x64.tar.gz
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_PIPE_LOGGING = true
-# environment
 PWD = /home/jp/WIP/GITRepos/wsl-repository
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/3533_interop
+WSL_INTEROP = /run/WSL/861_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -76,8 +72,6 @@ HOME = /home/jp
 CXXTESTGEN = cxxtestgen
 # environment
 LOGNAME = jp
-# environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -143,11 +137,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_EXTHOST_WILL_SEND_SOCKET = true
-# environment
 WSL_DISTRO_NAME = Ubuntu
 # variable set hash-table stats:
-# Load=68/1024=7%, Rehash=0, Collisions=8/109=7%
+# Load=64/1024=6%, Rehash=0, Collisions=8/105=8%
 
 # Pattern-specific Variable Values
 
@@ -278,7 +270,6 @@ CxxTests: CxxTests/CxxTestRunner
 	$(info $$OBJS is [${OBJS}])
 	rm -f $(CXXTESTDIR)/*~ $(CXXTESTDIR)/*.cpp $(CXXTESTDIR)/*.o
 
- 
 CxxTests/CxxTestRunner.o: CxxTests/CxxTestRunner.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'CxxTests/CxxTestRunner'
@@ -286,6 +277,7 @@ CxxTests/CxxTestRunner.o: CxxTests/CxxTestRunner.cpp
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
+ 
 # Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 #  recipe to execute (from '/home/jp/WIP/GITRepos/wsl-repository/Makefile', line 23):
 	$(CXX) -c -o $@ $^
@@ -314,6 +306,6 @@ CxxTests/CxxTestRunner: CxxTests/CxxTestRunner.o CxxTests/CxxTest3Suite.o CxxTes
 # strcache performance: lookups = 52 / hit rate = 36%
 # hash-table stats:
 # Load=33/8192=0%, Rehash=0, Collisions=1/52=2%
-# Finished Make data base on Sat Sep  3 22:53:17 2022
+# Finished Make data base on Sat Sep 17 13:05:17 2022
 
  

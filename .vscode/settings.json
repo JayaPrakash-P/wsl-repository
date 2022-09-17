@@ -95,7 +95,8 @@
         "stat.h": "c",
         "string.h": "c",
         "stdio.h": "c",
-        "dlfcn.h": "c"
+        "dlfcn.h": "c",
+        "pthread.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
