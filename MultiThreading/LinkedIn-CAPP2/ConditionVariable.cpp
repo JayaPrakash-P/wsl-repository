@@ -9,7 +9,8 @@
 //  - Wait
 //  - Signal (notify)
 //  - Broadcast (notify_all)
-//Generally, used for P[Producer-Consumer] problems
+//Generally, used for [Producer-Consumer] scenarios
+
 /* Example demonstrating chess moves*/
 
 int totalMovesMutex   = 500000;
