@@ -105,6 +105,7 @@ public:
             memcpy(&data, serverGreeting, strlen(serverGreeting));
             send(clientSocketFd, &data, strlen(data), 0); */
         }
+        clientSocketMap.erase(clientSocketFd);
     }
     
     void ProcessClientHeader(int clientSocketFd)
