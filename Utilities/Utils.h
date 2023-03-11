@@ -2,10 +2,31 @@
 #define _UTILS_H_
 #include <iostream>
 #include <chrono>
+#include <string>
 
-using Time = std::chrono::time_point<std::chrono::high_resolution_clock>;
-using DurationNs = std::chrono::duration<double, std::nano>;
-using DurationMs = std::chrono::duration<double, std::milli>;
+using TimeSteady  = std::chrono::time_point<std::chrono::steady_clock>;
+using TimeHighRes = std::chrono::time_point<std::chrono::high_resolution_clock>;
+using DurationNs  = std::chrono::duration<double, std::nano>;
+using DurationMs  = std::chrono::duration<double, std::milli>;
+
+class TimeElapsed
+{
+    public:
+        explicit TimeElapsed(std::string name) : fnName(name)
+        {
+            entryTime = std::chrono::steady_clock::now();
+        }
+        ~TimeElapsed()
+        {
+            exitTime = std::chrono::steady_clock::now();
+            std::cout << "Time Elapsed[" << fnName << "](in ms) = " << std::chrono::duration_cast<std::chrono::milliseconds>(exitTime - entryTime).count() << std::endl;
+        }
+
+        private:
+            std::string fnName;
+            TimeSteady entryTime;
+            TimeSteady exitTime;
+};
 
 enum class LogType
 {
@@ -78,7 +99,7 @@ public:
 private:
     std::string fnName;
     LogType logType;
-    Time entryTime, exitTime;
+    TimeHighRes entryTime, exitTime;
 };
 
 template <typename T = int, size_t N>
