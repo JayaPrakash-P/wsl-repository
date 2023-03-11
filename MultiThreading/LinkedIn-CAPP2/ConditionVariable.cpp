@@ -9,8 +9,11 @@
 //  - Wait
 //  - Signal (notify)
 //  - Broadcast (notify_all)
-//Generally, used for P[Producer-Consumer] problems
-/* Example demonstrating chess moves*/
+//Generally, used for [Producer-Consumer] problems
+/*
+    Example demonstrating chess moves...
+    Compilation Command : g++ -std=c++17 -pthread  -g ConditionVariable.cpp   -o ConditionVariable
+    */
 
 int totalMovesMutex   = 500000;
 int totalMovesCondVar = 500000;
