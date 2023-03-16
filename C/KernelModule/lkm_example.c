@@ -26,3 +26,25 @@ static void __exit lkm_example_exit(void) {
 
 module_init(lkm_example_init);
 module_exit(lkm_example_exit);
+
+/*
+Viewing module printk log nessages
+-----------——---------------------
+dmesg -c > / dev /null
+insmod <module_name>.ko
+rmmod <module_name>
+dmesg
+----------------------
+Tracing Function calls
+-----------------------
+cd / sys /kernel/debug/tracing/
+echo 0 >tracing_ on
+echo function_graph >current_tracer
+cat available_tracers
+hwlat blk miotrace function_graph wakeup_dl wakeup_rt wakeup function nop
+echo >trace
+echo :mod:<module_name> ›set_ftrace_filter
+echo 1 >tracing_on
+insmod <module_name>.ko
+cat trace
+*/
