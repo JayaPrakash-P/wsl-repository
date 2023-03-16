@@ -28,7 +28,7 @@ module_init(lkm_example_init);
 module_exit(lkm_example_exit);
 
 /*
-Viewing module printk log nessages
+Viewing module printk log messages
 -----------——---------------------
 dmesg -c > / dev /null
 insmod <module_name>.ko
