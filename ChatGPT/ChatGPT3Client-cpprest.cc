@@ -1,4 +1,4 @@
-//g++ -fpermissive ChatGPT3Client-cpprest.cc -o a.out -lcpprest -pthread -lcrypto -lssl
+//g++ -fpermissive ChatGPT3Client-cpprest.cc -o ChatGPT-3-Client -lcpprest -pthread -lcrypto -lssl
 
 #include <cpprest/http_client.h>
 #include <cpprest/json.h>
