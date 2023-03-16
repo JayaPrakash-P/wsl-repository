@@ -83,3 +83,7 @@ HackerRank/AttrParser/HRMLParser
 .vscode/configurationCache.log
 SocketProgramming/SocketServer
 MultiThreading/LinkedIn-CAPP2/ConditionVariable
+.vscode/configurationCache.log
+.vscode/targets.log
+ChatGPT/ChatGPT3Client.cc
+ChatGPT/APIKey.txt
