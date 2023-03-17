@@ -112,13 +112,13 @@ void PrintArray(const T inputData[])
 }
 
 template <typename T = int, size_t N>
-void GenerateRandomDataSet(T inputData[])
+constexpr void GenerateRandomDataSet(T inputData[])
 {
     /* initialize random seed: */
     srand (time(NULL));
     
     for(auto i = 0 ; i < N ; ++i)
-        inputData[i] = (rand()%N);
+        inputData[i] = (rand()%(N*10));
     
     //std::cout << "Generated Random Data Set : " ; PrintArray<T,N>(inputData);
 }
