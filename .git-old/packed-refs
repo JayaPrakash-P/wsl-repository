@@ -1,9 +1,0 @@
-# pack-refs with: peeled fully-peeled sorted 
-9253cf72f3480a305631506df6e2b9bd0e621097 refs/remotes/origin/master
-33c6becc2ab8bb9193dae65a1bb96391c3dd32ed refs/tags/JenkinsBuildTest
-^e85ffdd8eed63ee1b7a7ee00b72511a3708a8f11
-c8dba0844102245e49bdf2ac28f6b77dffafa5d9 refs/tags/JenkinsTestTag
-^e85ffdd8eed63ee1b7a7ee00b72511a3708a8f11
-59db6c384d99e39e4860e645836c66458a357014 refs/tags/JenkinsTestWithMinorChange
-^e85ffdd8eed63ee1b7a7ee00b72511a3708a8f11
-e85ffdd8eed63ee1b7a7ee00b72511a3708a8f11 refs/tags/origin
