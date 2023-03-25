@@ -67,8 +67,12 @@ std::string generate_text(const std::string& prompt) {
     return response;
 }
 
-int main() {
-    std::string prompt = "Write a C++ program to calculate the factorial of a number.\n";
+int main()
+{
+    // Prompt for user input
+    std::string prompt;
+    std::cout << "Enter a prompt for the OpenAI Chat GPT API: ";
+    std::getline(std::cin, prompt);
     std::string response = generate_text(prompt);
     json result = json::parse(response);
     std::string generated_text = result["choices"][0]["text"];
