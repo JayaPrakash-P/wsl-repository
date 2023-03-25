@@ -94,8 +94,9 @@ public:
     void AssignWork(PT_ULL pTask)
     {
         std::cout << "Created " << noOfThreads << " Threads\n";
-        std::lock_guard<std::mutex> lk(taskListMut);
+        std::unique_lock<std::mutex> lk(taskListMut);
         taskList.emplace_back(std::move(pTask));
+        lk.unlock();
         taskListConVar.notify_one();
     }
 
