@@ -1,8 +1,0 @@
-make QueueTest -f "/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Queue/Makefile" --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Queue'
-g++ -c Queue.cpp -o Queue.o
-g++ -c main.cpp -o main.o
-Making QueueTest with Queue.o main.o
-g++ -g Queue.o main.o -o QueueTest
-make: Leaving directory '/home/jp/WIP/GITRepos/wsl-repository/Algorithms/Queue'
- 
