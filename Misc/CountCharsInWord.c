@@ -6,40 +6,47 @@
 #include <ctype.h>
 
 #define MAX_ENTRIES 36
-
-struct KeyValuePair
+typedef struct KeyVal
 {
 	char key;
-	int  value;
-};
+	int value;
+}KeyVal;
 
-struct KeyValuePair indexLUT[MAX_ENTRIES];
+typedef struct Map
+{
+	KeyVal mapEntries[MAX_ENTRIES];
+}Map;
+
+Map indexLUT;
 
 void GenerateLUT()
 {
-	int startKey = (int)'0';
-	for (int i = 0 ; i < MAX_ENTRIES ; ++i)
+	int index = 0;
+	for (int i = (int)'0' ; i <= (int)'9' ; ++i)
 	{
-		indexLUT[i].key   = (char)startKey++;
-		indexLUT[i].value = i;
-		if(i == 9)
-			startKey = (int)'a';
+		indexLUT.mapEntries[index].key   = (char)i;
+		indexLUT.mapEntries[index++].value = ((char)i-'0');
+	}
+	for (int i = (int)'a' ; i <= (int)'z' ; ++i)
+	{
+		indexLUT.mapEntries[index].key   = (char)i;
+		indexLUT.mapEntries[index++].value = ((char)i - 'a')+10;
 	}
 }
 
 void DisplayLUT()
 {
 	for (int i = 0 ; i < MAX_ENTRIES ; ++i)
-		printf("{[%c]:[%d]}\n", indexLUT[i].key, indexLUT[i].value);
+		printf("{[%c]:[%d]}\n", indexLUT.mapEntries[i].key, indexLUT.mapEntries[i].value);
 }
 
 int GetValueFromLUT(char inChar)
 {
     char retVal = 0;
 	for (int i = 0 ; i < MAX_ENTRIES ; ++i)
-		if(tolower(inChar) == indexLUT[i].key)
+		if(tolower(inChar) == indexLUT.mapEntries[i].key)
         {
-            retVal = indexLUT[i].value;
+            retVal = indexLUT.mapEntries[i].value;
             break;
         }
     return retVal;
@@ -70,7 +77,7 @@ void CountCharaters(const char* inputStr)
     for (int i = 0 ; i < MAX_ENTRIES ; ++i)
     {
         if(countArray[i] != 0)
-            printf("{[%c]-[%d]}", indexLUT[i].key, countArray[i]);
+            printf("[%c-%d]", indexLUT.mapEntries[i].key, countArray[i]);
     }
     printf("\nBye...\n");
 }
@@ -81,6 +88,7 @@ int main()
     printf ("Enter the string: ");
     fgets(inputStr,256,stdin);
     GenerateLUT();
+    //DisplayLUT();
     CountCharaters(inputStr);
     return 0;
 }

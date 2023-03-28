@@ -3,18 +3,11 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
+
+
 union Digits
 {
 	char wholeNumber[8];
-	int8_t digit0;
-	int8_t digit1;
-	int8_t digit2;
-	int8_t digit3;
-	int8_t digit4;
-	int8_t digit5;
-	int8_t digit6;
-	int8_t digit7;
-	
 } uDigits;
 
 bool isHappy(int input)
@@ -46,16 +39,9 @@ int main(int argc, char* argv[])
     if(argc == 2)
         inputNum = atoi(argv[1]);
 	sprintf(uDigits.wholeNumber, "%d", inputNum);
-	printf("sizeof(uDigits) : %d\n",sizeof(uDigits));
-	printf("uDigits.wholeNumber : %s\n",uDigits.wholeNumber);
-	printf("uDigits.digit0 : %d\n",uDigits.digit0);
-	printf("uDigits.digit1 : %d\n",uDigits.digit1);
-	printf("uDigits.digit2 : %d\n",uDigits.digit2);
-	printf("uDigits.digit3 : %d\n",uDigits.digit3);
-	printf("uDigits.digit4 : %d\n",uDigits.digit4);
-	printf("uDigits.digit5 : %d\n",uDigits.digit5);
-	printf("uDigits.digit6 : %d\n",uDigits.digit6);
-	printf("uDigits.digit7 : %d\n",uDigits.digit7);
+	printf("sizeof(uDigits) : %lu\n",sizeof(uDigits));
+	for(auto c : uDigits.wholeNumber)
+		printf("c : %c\n",c);
     if(isHappy(inputNum))
         printf("%d is a HAPPY number!!!\n",inputNum);
     else
